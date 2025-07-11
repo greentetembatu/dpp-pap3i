@@ -1,0 +1,90 @@
+{
+    "navbarMenu": [
+        {
+            "name": "Home",
+            "link": "#hero-section",
+            "icon": "fas fa-home"
+        },
+        {
+            "name": "About",
+            "link": "#",
+            "icon": "fas fa-user",
+            "submenu": [
+                {
+                    "name": "Visi Misi",
+                    "link": "#visi-misi"
+                },
+                {
+                    "name": "Sejarah",
+                    "link": "#sejarah"
+                },
+                {
+                    "name": "Tim Kami",
+                    "link": "#tim-kami"
+                }
+            ]
+        },
+        {
+            "name": "Layanan",
+            "link": "#",
+            "icon": "fas fa-clone",
+            "submenu": [
+                {
+                    "name": "Sub Layanan 1",
+                    "link": "#layanan-sub1"
+                },
+                {
+                    "name": "Sub Layanan 2",
+                    "link": "#",
+                    "submenu": [
+                        {
+                            "name": "Sub Sub Layanan 2 A",
+                            "link": "#layanan-sub2a"
+                        },
+                        {
+                            "name": "Sub Sub Layanan 2 B",
+                            "link": "#layanan-sub2b"
+                        },
+                        {
+                            "name": "Sub Sub Layanan 2 C",
+                            "link": "#"
+                        }
+                    ]
+                },
+                {
+                    "name": "Sub Layanan 3",
+                    "link": "#",
+                    "submenu": [
+                        {
+                            "name": "Sub Sub Layanan 3 A",
+                            "link": "#layanan-sub3a"
+                        },
+                        {
+                            "name": "Sub Sub Layanan 3 B",
+                            "link": "#"
+                        },
+                        {
+                            "name": "Sub Sub Layanan 3 C",
+                            "link": "#"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Klien",
+            "link": "#klien",
+            "icon": "fas fa-users"
+        },
+        {
+            "name": "Mitra",
+            "link": "#mitra",
+            "icon": "fas fa-handshake"
+        },
+        {
+            "name": "Kontak",
+            "link": "#kontak",
+            "icon": "fas fa-phone"
+        }
+    ]
+}
