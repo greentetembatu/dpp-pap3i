@@ -1,6 +1,6 @@
 /* General Styling */
 :root {
-    --primary-color: #0056b3; /* Darker blue for accents */
+    --primary-color: #057414; /* Darker blue for accents */
     --secondary-color: #007bff; /* Main blue for links/buttons */
     --text-color: #333;
     --light-gray: #f4f4f4;
@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -171,6 +172,7 @@ header {
 .sub-menu li,
 .sub-menu-2 li {
     margin: 0;
+    padding-left: 12px;
 }
 
 .sub-menu a,
@@ -382,6 +384,8 @@ header {
     padding: 60px 0;
     background-color: var(--light-gray);
     margin-bottom: 50px;
+    margin-top: auto;
+    scroll-padding-top: 90px;
 }
 
 .section-header {
@@ -407,7 +411,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -444,8 +448,9 @@ header {
 }
 
 .image-caption p {
-    font-size: 0.9em;
+    font-size: 1rem;
     color: var(--light-gray);
+
 }
 
 .about-content {
@@ -461,12 +466,16 @@ header {
 .about-content p {
     margin-bottom: 20px;
     text-align: justify;
+    
+
 }
 
 .about-content .text-content {
     max-height: 200px; /* Initial height for collapsed text */
     overflow: hidden;
     transition: max-height 0.5s ease-out;
+    
+
 }
 
 .about-content .text-content.expanded {
