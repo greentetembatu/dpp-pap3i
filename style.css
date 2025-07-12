@@ -270,14 +270,14 @@ header {
 
 .slide-caption {
     position: absolute;
-    bottom: 20px;
+    bottom: 90px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.6);
     color: var(--white);
     padding: 8px 15px;
     border-radius: 5px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     opacity: 0; /* Hidden by default, shown when active */
     transition: opacity 0.5s ease;
 }
@@ -338,32 +338,35 @@ header {
 
 .welcome-message {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     color: var(--white);
     z-index: 6; /* Ensure it's above the carousel slides */
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
     border-radius: 10px;
     max-width: 80%;
 }
 
 .welcome-message h1 {
-    font-size: 3em;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
 .welcome-message h2 {
-    font-size: 2em;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
+    text-shadow: 1px 1px #ffffff;
+    line-height: 30px;
 }
 
 .welcome-message p {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 30px;
+    line-height: 16px;
 }
 
 .cta-button {
@@ -381,16 +384,16 @@ header {
 
 /* About Section */
 .about-section {
-    padding: 60px 0;
+    padding: 30px 0;
     background-color: var(--light-gray);
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: auto;
     scroll-padding-top: 90px;
 }
 
 .section-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .section-header h1 {
@@ -622,7 +625,10 @@ footer {
     .welcome-message h1 {
         font-size: 2.2em;
     }
-
+    .slide-caption {
+    
+    bottom: 20px;
+    }
     .welcome-message h2 {
         font-size: 1.5em;
     }
@@ -646,29 +652,39 @@ footer {
     }
 
     .welcome-message {
-        padding: 20px;
+        padding: 10px;
     }
 
     .welcome-message h1 {
-        font-size: 1.8em;
+        font-size: 1.5rem;
+                line-height: 20px;
+
     }
 
     .welcome-message h2 {
-        font-size: 1.2em;
+        font-size: 1rem;
+                line-height: 18px;
+
     }
 
     .welcome-message p {
-        font-size: 0.9em;
+        font-size: 0.9rem;
+        line-height: 15px;
     }
 
     .carousel-arrow {
         padding: 10px;
-        font-size: 1.2em;
+        font-size: 1rem;
     }
 
     .carousel-arrow.prev {
         left: 10px;
     }
+    .slide-caption {
+    
+    bottom: 20px;
+    }
+
 
     .carousel-arrow.next {
         right: 10px;
