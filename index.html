@@ -24,53 +24,113 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="top-contact-bar">
-            <div class="container">
-                <div class="top-contact-content">
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                    <div class="contact-info">
-                        <a href="https://wa.me/6281234567890" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i> 081234567890</a>
-                        <a href="mailto:dpppap3i@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i> dpppap3i@gmail.com</a>
-                        <a href="#" aria-label="admin"><i class="fas fa-sign-in-alt"></i> admin</a>
-                    </div>
+
+    <div class="top-contact-bar bg-dark text-white py-2 d-none d-lg-block">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="social-links">
+                    <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-3" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="contact-info">
+                    <a href="https://wa.me/6281234567890" class="text-white me-3" aria-label="WhatsApp"><i class="fab fa-whatsapp me-1"></i> 081234567890</a>
+                    <a href="mailto:dpppap3i@gmail.com" class="text-white me-3" aria-label="Email"><i class="fas fa-envelope me-1"></i> dpppap3i@gmail.com</a>
+                    <a href="#" class="text-white" aria-label="admin"><i class="fas fa-user me-1"></i> admin</a>
                 </div>
             </div>
         </div>
+    </div>
 
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <img src="assets/logo.jpeg" alt="Logo P-AP3I">
-                    <h1>DPP. <span>P-AP3I</span></h1>
-                </div>
 
-                <button class="toggle-button" aria-label="Toggle menu" aria-expanded="false">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                
-                <div class="menu-bar">
-                    <ul id="navbar-menu">
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" id="main-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/logo.jpeg" alt="P-AP3I Logo" height="50" class="me-2 logo-img">
+                <h1 class="h5 mb-0 fw-bold">DPP. <span class="text-danger">P-AP3I</span></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-user me-1"></i> About
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="visimisi.html">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="sejarah.html">Sejarah</a></li>
+                            <li><a class="dropdown-item" href="timkami.html">Tim Kami</a></li>
+                            <li><a class="dropdown-item" href="ruanglingkup.html">Ruang Lingkup</a></li>
                         </ul>
-                </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="layanan.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-clone me-1"></i> Layanan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="rekomendasi.html">Rekomendasi & KTA</a></li>
+                            <li><a class="dropdown-item" href="pelatihan.html">Pelatihan</a></li>
+                            <li><a class="dropdown-item" href="lainnya.html">Layanan Lainnya</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="mitra.html" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-handshake me-1"></i> Mitra
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+                            <li><a class="dropdown-item" href="lsklsp.html">LSK & LSP</a></li>
+                            <li><a class="dropdown-item" href="anggota.html">Anggota</a></li>
+                            <li><a class="dropdown-item" href="mitralainnya.html">Mitra Lainnya</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="kegiatan.html" id="activitiesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-calendar-alt me-1"></i> Kegiatan
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="activitiesDropdown">
+                            <li><a class="dropdown-item" href="kegiatandpp.html">Kegiatan DPP</a></li>
+                            <li><a class="dropdown-item" href="kegiatandpd.html">Kegiatan DPD</a></li>
+                            <li><a class="dropdown-item" href="kegiatandpc.html">Kegiatan DPC</a></li>
+                        </ul>
+                    </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#blogberitaforum.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-clone me-1"></i> BBF
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="berita.html">Berita</a></li>
+                            <li><a class="dropdown-item" href="forum.html">Forum</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kontak.html"><i class="fas fa-phone me-1"></i> Kontak</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <main>
+
+
+
         <section class="hero-section" id="hero-section">
             <div class="carousel-container">
                 <div class="welcome-message">
-                    <h1>Oficial Website</h1>
+                    <h1>Oficial Website P-AP3I</h1>
                     <h2>Perkumpulan Para Pemijat Penyehatan Indonesia</h2>
-                    <p>Membangun SDM Melalui Kesehatan dan Melestarikan Budaya</p>
+                    <p>Membangun Kesehatan dan Melestarikan Budaya</p>
                     <a href="#tentang-kami" class="cta-button">Kenali Kami</a>
                 </div>
                 
@@ -87,7 +147,7 @@
             
                     <div class="carousel-slide">
                         <img src="assets/foto/Slide-3.png" alt="Slide tentang Pembangunan" />
-                        <div class="slide-caption">Membangun</div>
+                        <div class="slide-caption">Kegiatan</div>
                     </div>
                 </div>
             
@@ -101,6 +161,13 @@
                 </div>
             </div>
         </section>
+
+
+
+
+
+
+
 
         <section class="about-section" id="tentang-kami" aria-labelledby="about-section-title">
             <div class="section-header">
@@ -120,93 +187,460 @@
                 <div class="about-content">
                     <div class="content-wrapper">
                         <div class="text-content collapsed-text" id="about-more-info">
-                            <p>PENDAHULUAN Menyadari bahwa kesehatan masyarakat merupakan unsur pokok untuk memajukan kesejahteraan dan kecerdasan kehidupan bangsa, seperti yang tercantum dalam Undang-Undang Dasar 1945, maka kami Para Praktisi Pijat Penyehatan Indonesia, menghimpun diri dalam sebuah wadah organisasi sebagai wujud peran serta aktif kami dalam meningkatkan derajat kesehatan masyarakat. Wadah ini bernama PERKUMPULAN PARA PEMIJAT PENYEHATAN INDONESIA disingkat menjadi (P-AP3I). P-AP3I merupakan wadah organisasi bagi para pemijat pengobatan di Indonesia yang bersifat keilmuan, terbuka, independen, dan tidak berpolitik praktis atau tidak berada dibawah naungan partai politik apapun. P-AP3I juga merupakan wadah bagi para praktisi pijat pengobatan yang ingin mengembangkan keterampilan dan pengetahuannya sehingga menjadi praktisi yang profesional sesuai kaidah keilmuannya. Era globalisasi yang sudah di depan mata semakin memacu gerak P-AP3I dalam mengejar kesetaraan di bidang keilmuan dan keterampilan yang telah memiliki standar kompetensi. Sehingga dengan kompetensi yang dimiliki, anggota P-AP3I dapat memanfaatkan kemampuannya secara optimal dan bisa menyejahterakan kehidupannya. Dalam mewujudkan Peran P-AP3I sebagai wadah inspirasi dan aspirasi bagi anggotanya, maka Rakernas menjadi salah satu alternatif dalam menampung dan menyebarkan berbagai informasi mulai dari tingkat DPP, DPD, DPC hingga anggota. Rakernas juga menjadi ajang pertemuan guna mempererat tali persaudaraan sesama anggota.</p>
+                            <h4>Perkumpulan Para Pemijat Penyehatan Indonesia (P-AP3I): Mewujudkan Kesehatan dan Profesionalisme Bangsa</h4>
+                            <p>Perkumpulan Para Pemijat Penyehatan Indonesia (P-AP3I), sebuah wadah bagi para praktisi pijat pengobatan di Indonesia. P-AP3I bersifat keilmuan, terbuka, independen, dan non-politik. <br>
+                            Dibentuk sebagai bentuk kontribusi dalam meningkatkan derajat kesehatan masyarakat sesuai amanat Undang-Undang Dasar 1945. <br>
+                            P-AP3I bertujuan mengembangkan keterampilan dan pengetahuan anggotanya agar menjadi praktisi profesional. Dalam menghadapi era globalisasi. <br>
+                            P-AP3I berupaya mengejar kesetaraan dalam bidang keilmuan dan keterampilan dengan standar kompetensi, sehingga anggota dapat mengoptimalkan kemampuannya dan meningkatkan kesejahteraan.</p>
                         </div>
-                        <button class="read-more-button">Read More</button>
+                        <a href="about.html" class="read-more-button">Baca Lebih Lanjut</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="visi-misi" class="content-section">
-            <div class="container">
-                <h2>Visi Misi</h2>
-                <p>Isi konten Visi Misi Anda di sini.</p>
-            </div>
-        </section>
 
-        <section id="sejarah" class="content-section">
-            <div class="container">
-                <h2>Sejarah</h2>
-                <p>Isi konten Sejarah Anda di sini.</p>
-            </div>
-        </section>
 
-        <section id="tim-kami" class="content-section">
-            <div class="container">
-                <h2>Tim Kami</h2>
-                <p>Isi konten Tim Kami Anda di sini.</p>
-            </div>
-        </section>
 
-        <section id="layanan-sub1" class="content-section">
-            <div class="container">
-                <h2>Sub Layanan 1</h2>
-                <p>Isi konten Sub Layanan 1 Anda di sini.</p>
+
+
+
+
+
+
+<section class="services-section" id="layanan">
+    <div class="section-header">
+        <h1>LAYANAN</h1>
+        <div class="garis"></div>
+        <p class="section-subtitle">Adapun layanan dari P-AP3I terdiri dari beberapa bidang berikut:</p>
+    </div>
+
+    <div class="services-container">
+        <!-- Foto Slideshow -->
+        <div class="services-gallery">
+            <div class="gallery-slides">
+                <div class="gallery-slide active">
+                    <img src="assets/foto/Slide-1.png" alt="Rekomendasi dan KTA" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="assets/foto/Slide-2.png" alt="Pelatihan" loading="lazy">
+                </div>
+                <div class="gallery-slide">
+                    <img src="assets/foto/Slide-3.png" alt="Layanan lainnya" loading="lazy">
+                </div>
             </div>
-        </section>
+            <div class="gallery-controls">
+                <button class="gallery-arrow prev">❮</button>
+                <div class="gallery-dots">
+                    <span class="gallery-dot active" data-index="0"></span>
+                    <span class="gallery-dot" data-index="1"></span>
+                    <span class="gallery-dot" data-index="2"></span>
+                </div>
+                <button class="gallery-arrow next">❯</button>
+            </div>
+        </div>
+
+        <!-- Teks Layanan -->
+        <div class="services-content">
+            <div class="service-item active">
+                <h2>Rekomendasi dan KTA</h2>
+                <p>P-AP3I memberikan rekomendasi resmi bagi anggota yang memenuhi syarat serta Kartu Tanda Anggota (KTA) sebagai bukti keanggotaan yang sah. KTA ini dapat digunakan untuk berbagai keperluan profesional anggota.</p>
+                <a href="about.html" class="read-more-button">Baca Lebih Lanjut</a>
+            </div>
+            
+            <div class="service-item">
+                <h2>Pelatihan</h2>
+                <p>Kami menyelenggarakan pelatihan berkala untuk meningkatkan kompetensi anggota, meliputi teknik pemijatan terbaru, standar kesehatan, serta pelatihan manajemen praktik. Pelatihan dilakukan oleh instruktur bersertifikat.</p>
+                <a href="about.html" class="read-more-button">Baca Lebih Lanjut</a>
+            </div>
+            
+            <div class="service-item">
+                <h2>Layanan lainnya</h2>
+                <p>P-AP3I juga memberikan berbagai layanan pendukung seperti konsultasi hukum dasar, jaringan relasi profesional, serta akses informasi terbaru seputar dunia pemijatan dan kesehatan tradisional.</p>
+                <a href="about.html" class="read-more-button">Baca Lebih Lanjut</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="mitra-section" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">Mitra <span class="text-danger">P-AP3I</span></h2>
+        <p class="text-center lead mb-5">Adapun Mitra dari P-AP3I terdiri dari beberapa:</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="assets/foto/Slide-1.png" class="card-img-top" alt="LSK dan LSP">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">LSK dan LSP</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">P-AP3I bekerja sama dengan Lembaga Sertifikasi Kompetensi (LSK) dan Lembaga Sertifikasi Profesi (LSP) terkemuka untuk memastikan standar kompetensi yang tinggi bagi para profesional.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="assets/foto/Slide-2.png" class="card-img-top" alt="Anggota P-AP3I">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Anggota</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">Bergabunglah dengan jaringan profesional kami. P-AP3I menyatukan para ahli di bidangnya, menyediakan platform untuk kolaborasi dan pengembangan.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="assets/foto/Slide-3.png" class="card-img-top" alt="Pelatihan P-AP3I">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Pelatihan</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">Tingkatkan keahlian Anda dengan program pelatihan kami. P-AP3I menawarkan berbagai kursus yang relevan dengan industri.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section id="kegiatan-section" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 display-5 fw-bold">Kegiatan <span class="text-danger">P-AP3I</span></h2>
+        <p class="text-center lead mb-5">Berikut ini kegiatan P-AP3I:</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div id="carouselDPP" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/foto/Slide-1.png" class="d-block w-100 card-img-top" alt="Kegiatan DPP 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-2.png" class="d-block w-100 card-img-top" alt="Kegiatan DPP 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-3.png" class="d-block w-100 card-img-top" alt="Kegiatan DPP 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDPP" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDPP" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Kegiatan DPP</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">Lihat berbagai agenda dan program skala nasional yang diadakan langsung oleh Dewan Pimpinan Pusat P-AP3I untuk seluruh anggota dan mitra.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div id="carouselDPD" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/foto/Slide-1.png" class="d-block w-100 card-img-top" alt="Kegiatan DPD 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-2.png" class="d-block w-100 card-img-top" alt="Kegiatan DPD 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-3.png" class="d-block w-100 card-img-top" alt="Kegiatan DPD 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDPD" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDPD" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Kegiatan DPD</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">Informasi mengenai kegiatan-kegiatan regional yang diselenggarakan oleh Dewan Pimpinan Daerah P-AP3I di berbagai provinsi.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0">
+                    <div id="carouselDPC" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/foto/Slide-1.png" class="d-block w-100 card-img-top" alt="Kegiatan DPC 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-2.png" class="d-block w-100 card-img-top" alt="Kegiatan DPC 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/foto/Slide-3.png" class="d-block w-100 card-img-top" alt="Kegiatan DPC 3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselDPC" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselDPC" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Kegiatan DPC</h5>
+                        <p class="card-text text-center text-muted flex-grow-1">Dapatkan detail kegiatan dan inisiatif lokal dari Dewan Pimpinan Cabang P-AP3I yang tersebar di seluruh kabupaten/kota.</p>
+                        <div class="text-center mt-3">
+                            <a href="#" class="btn btn-danger">Baca Selengkapnya</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="blog-berita-forum" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 display-5 fw-bold">Blog <span class="text-danger">Berita Forum</span></h2>
+        <p class="text-center lead mb-5">Ikuti perkembangan terbaru dan artikel menarik dari P-AP3I di forum berita kami.</p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 blog-post-card">
+                    <img src="assets/foto/Slide-1.png" class="card-img-top blog-post-img" alt="Berita Terkini 1">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-muted mb-2"><i class="fas fa-tag me-1"></i> <a href="#" class="text-decoration-none text-danger">Pengumuman</a> | <i class="fas fa-calendar-alt ms-2 me-1"></i> 11 November 2025</small>
+                        <h5 class="card-title mb-2"><a href="#" class="text-decoration-none text-dark">Rapat Kerja Nasional P-AP3I Sukses Diselenggarakan</a></h5>
+                        <p class="card-text text-muted flex-grow-1">Dewan Pimpinan Pusat P-AP3I telah sukses menggelar Rapat Kerja Nasional (Rakernas) tahunan yang dihadiri oleh perwakilan DPD dan DPC seluruh Indonesia.</p>
+                        <a href="#" class="btn btn-outline-danger btn-sm mt-3 align-self-start">Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 blog-post-card">
+                    <img src="assets/foto/Slide-2.png" class="card-img-top blog-post-img" alt="Berita Terkini 2">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-muted mb-2"><i class="fas fa-tag me-1"></i> <a href="#" class="text-decoration-none text-danger">Kegiatan</a> | <i class="fas fa-calendar-alt ms-2 me-1"></i> 05 Juli 2025</small>
+                        <h5 class="card-title mb-2"><a href="#" class="text-decoration-none text-dark">Workshop Peningkatan Kompetensi Auditor Internal</a></h5>
+                        <p class="card-text text-muted flex-grow-1">Workshop interaktif ini memberikan wawasan mendalam tentang standar audit terbaru dan praktik terbaik untuk meningkatkan kualitas</p>
+                        <a href="#" class="btn btn-outline-danger btn-sm mt-3 align-self-start">Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 shadow-sm border-0 blog-post-card">
+                    <img src="assets/foto/Slide-3.png" class="card-img-top blog-post-img" alt="Berita Terkini 3">
+                    <div class="card-body d-flex flex-column">
+                        <small class="text-muted mb-2"><i class="fas fa-tag me-1"></i> <a href="#" class="text-decoration-none text-danger">Publikasi</a> | <i class="fas fa-calendar-alt ms-2 me-1"></i> 28 Juni 2025</small>
+                        <h5 class="card-title mb-2"><a href="#" class="text-decoration-none text-dark">Rilis Buletin Terbaru P-AP3I Edisi Terbaru</a></h5>
+                        <p class="card-text text-muted flex-grow-1">Buletin triwulan terbaru P-AP3I kini telah tersedia, membahas tren industri, studi kasus, dan wawancara eksklusif dengan para pemimpin</p>
+                        <a href="#" class="btn btn-outline-danger btn-sm mt-3 align-self-start">Baca Selengkapnya <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <section id="layanan-sub2a" class="content-section">
-            <div class="container">
-                <h2>Sub Sub Layanan 2 A</h2>
-                <p>Isi konten Sub Sub Layanan 2 A Anda di sini.</p>
-            </div>
-        </section>
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-lg btn-danger">Lihat Semua Berita <i class="fas fa-long-arrow-alt-right ms-2"></i></a>
+        </div>
+    </div>
+</section>
 
-        <section id="layanan-sub2b" class="content-section">
-            <div class="container">
-                <h2>Sub Sub Layanan 2 B</h2>
-                <p>Isi konten Sub Sub Layanan 2 B Anda di sini.</p>
-            </div>
-        </section>
 
-        <section id="layanan-sub3a" class="content-section">
-            <div class="container">
-                <h2>Sub Sub Layanan 3 A</h2>
-                <p>Isi konten Sub Sub Layanan 3 A Anda di sini.</p>
-            </div>
-        </section>
-        
-        <section id="klien" class="content-section">
-            <div class="container">
-                <h2>Klien Kami</h2>
-                <p>Isi konten Klien Anda di sini.</p>
-            </div>
-        </section>
 
-        <section id="mitra" class="content-section">
-            <div class="container">
-                <h2>Mitra Kami</h2>
-                <p>Isi konten Mitra Anda di sini.</p>
+
+
+
+
+
+
+
+
+
+
+<section id="kontak-section" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4 display-5 fw-bold">Hubungi <span class="text-danger">Kami</span></h2>
+        <p class="text-center lead mb-5">Kami siap membantu Anda! Silakan hubungi kami melalui informasi kontak di bawah ini atau kirimkan pesan langsung kepada kami.</p>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Lokasi Kami</h5>
+                        <div class="map-container flex-grow-1">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.6083164993176!2d106.828695014769!3d-6.180295895521743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f430f8b1e4c7%3A0x6a2c2c0a9e7b2b6!2sMonumen%20Nasional!5e0!3m2!1sen!2sid!4v1678901234567!5m2!1sen!2sid"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+                        </div>
+                        <p class="text-center text-muted mt-3 mb-0">Cempaka Putih, Jakarta Pusat, DKI Jakarta.</p>
+                    </div>
+                </div>
             </div>
-        </section>
 
-        <section id="kontak" class="content-section">
-            <div class="container">
-                <h2>Kontak Kami</h2>
-                <p>Isi konten Kontak Anda di sini.</p>
+            <div class="col-lg-6">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-center text-danger mb-3">Kirim Pesan Kepada Kami</h5>
+                        <form class="flex-grow-1 d-flex flex-column">
+                            <div class="mb-3">
+                                <label for="namaLengkap" class="form-label">Nama Lengkap</label>
+                                <input type="text" class="form-control" id="namaLengkap" placeholder="Masukkan nama lengkap Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Alamat Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="nama@contoh.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subjek" class="form-label">Subjek</label>
+                                <input type="text" class="form-control" id="subjek" placeholder="Subjek pesan Anda" required>
+                            </div>
+                            <div class="mb-3 flex-grow-1">
+                                <label for="pesan" class="form-label">Pesan Anda</label>
+                                <textarea class="form-control h-100" id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-danger">Kirim Pesan</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-    </main>
 
-    <footer>
+
+
+
+
+
+
+
+
+    <footer class="footer bg-green text-white py-5">
         <div class="container">
-            <p>&copy; 2025 DPP-PAP3I. Semua Hak Cipta Dilindungi.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">DPP. P-AP3I</h5>
+                    <p>Dewan Pengurus Pusat Persatuan Para Pemijat Penyehatan Indonesia</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white me-3" aria-label="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#hero-section" class="text-white text-decoration-none">Home</a></li>
+                        <li><a href="#about-section" class="text-white text-decoration-none">About</a></li>
+                        <li><a href="#services-section" class="text-white text-decoration-none">Layanan</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Mitra</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Kegiatan</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Blog Berita Forum</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Jl. Cempaka Putih</li>
+                        <li><i class="fas fa-phone me-2"></i> 08123456789</li>
+                        <li><i class="fab fa-whatsapp me-2"></i> <a href="https://wa.me/6281234567890" class="text-white text-decoration-none">081234567890</a></li>
+                        <li><i class="fas fa-envelope me-2"></i> <a href="mailto:dpppap3i@gmail.com" class="text-white text-decoration-none">dpppap3i@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-4 mb-3">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2025 DPP. P-AP3I. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+    </main>
 
-    <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+    <script src="js/servicesection.js"></script>
+        <!--<script src="js/placeholder.js"></script>-->
+
 </body>
 </html>
-
