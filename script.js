@@ -1,195 +1,342 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // --- Navbar Menu (Loaded from data.json) ---
-    const navbarMenu = document.getElementById('navbar-menu');
+// Custom JavaScript for DPP. P-AP3I Website
 
-    fetch('data.json')
-        .then(response => response.json())
-        .then(data => {
-            function createMenuItem(item) {
-                const li = document.createElement('li');
-                let linkHtml = `<i class="${item.icon}"></i> ${item.name}`;
+document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-                if (item.submenu) {
-                    li.classList.add('dropdown');
-                    linkHtml += ` <i class="fas fa-angle-down"></i>`;
-                    li.innerHTML = `<a href="${item.link}" aria-haspopup="true" aria-expanded="false">${linkHtml}</a>`;
-                    const subMenu = document.createElement('div');
-                    subMenu.classList.add('sub-menu');
-                    const ulSub = document.createElement('ul');
-                    item.submenu.forEach(subItem => {
-                        const subLi = document.createElement('li');
-                        if (subItem.submenu) {
-                            subLi.classList.add('nested-dropdown');
-                            subLi.innerHTML = `<a href="${subItem.link}" aria-haspopup="true" aria-expanded="false">${subItem.name} <i class="fas fa-angle-right"></i></a>`;
-                            const subMenu2 = document.createElement('div');
-                            subMenu2.classList.add('sub-menu-2');
-                            const ulSub2 = document.createElement('ul');
-                            subItem.submenu.forEach(subSubItem => {
-                                const subSubLi = document.createElement('li');
-                                subSubLi.innerHTML = `<a href="${subSubItem.link}">${subSubItem.name}</a>`;
-                                ulSub2.appendChild(subSubLi);
-                            });
-                            subMenu2.appendChild(ulSub2);
-                            subLi.appendChild(subMenu2);
-                        } else {
-                            subLi.innerHTML = `<a href="${subItem.link}">${subItem.name}</a>`;
-                        }
-                        ulSub.appendChild(subLi);
-                    });
-                    subMenu.appendChild(ulSub);
-                    li.appendChild(subMenu);
-                } else {
-                    li.innerHTML = `<a href="${item.link}">${linkHtml}</a>`;
-                }
-                return li;
-            }
-
-            data.navbarMenu.forEach(item => {
-                navbarMenu.appendChild(createMenuItem(item));
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
             });
 
-            // Set active class based on current URL hash (for single-page navigation)
-            const currentHash = window.location.hash;
-            if (currentHash) {
-                const activeLink = navbarMenu.querySelector(`a[href="${currentHash}"]`);
-                if (activeLink) {
-                    // Remove active from default 'Home' if another section is active
-                    const defaultHome = navbarMenu.querySelector('a[href="#hero-section"]');
-                    if (defaultHome) defaultHome.classList.remove('active');
-                    activeLink.classList.add('active');
-                }
+            // Close the navbar toggler on small screens after clicking a link
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        });
+    });
+
+    // Add a class to the navbar on scroll for a sticky effect (optional)
+    const mainNavbar = document.getElementById('main-navbar');
+    if (mainNavbar) {
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) { // Adjust value as needed
+                mainNavbar.classList.add('navbar-scrolled');
             } else {
-                // Default active to Home if no hash is present
-                const defaultHome = navbarMenu.querySelector('a[href="#hero-section"]');
-                if (defaultHome) defaultHome.classList.add('active');
-            }
-        })
-        .catch(error => console.error('Error fetching navbar data:', error));
-
-    // --- Hamburger Menu Toggle ---
-    const toggleButton = document.querySelector('.toggle-button');
-    const menuBar = document.querySelector('.menu-bar');
-    const navbarLinks = document.querySelectorAll('.menu-bar a');
-
-    toggleButton.addEventListener('click', () => {
-        menuBar.classList.toggle('active');
-        toggleButton.classList.toggle('active');
-        const expanded = toggleButton.getAttribute('aria-expanded') === 'true' || false;
-        toggleButton.setAttribute('aria-expanded', !expanded);
-    });
-
-    // Close menu when a link is clicked (for mobile)
-    navbarLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 992) { // Adjust breakpoint as per CSS media query
-                menuBar.classList.remove('active');
-                toggleButton.classList.remove('active');
-                toggleButton.setAttribute('aria-expanded', 'false');
-            }
-
-            // Remove 'active' from all links and add to the clicked one
-            navbarLinks.forEach(item => item.classList.remove('active'));
-            link.classList.add('active');
-;
-
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.navbar')) {
-            document.querySelectorAll('.dropdown').forEach(dropdown => {
-                dropdown.querySelector('.sub-menu').style.display = 'none';
-                dropdown.querySelector('a').setAttribute('aria-expanded', 'false');
-            });
-            document.querySelectorAll('.nested-dropdown').forEach(nestedDropdown => {
-                nestedDropdown.querySelector('.sub-menu-2').style.display = 'none';
-                nestedDropdown.querySelector('a').setAttribute('aria-expanded', 'false');
-            });
-        }
-    });
-
-    // --- Carousel Functionality ---
-    const slides = document.querySelectorAll('.carousel-slide');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const prevArrow = document.querySelector('.carousel-arrow.prev');
-    const nextArrow = document.querySelector('.carousel-arrow.next');
-    let currentIndex = 0;
-    let slideInterval;
-
-    function showSlide(index) {
-        // Hide all slides and remove active class from dots
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            dots[i].classList.remove('active');
-        });
-
-        // Show the current slide and add active class to its dot
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-
-        // Adjust the transform for smooth sliding
-        document.querySelector('.carousel-slides').style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    function prevSlide() {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        showSlide(currentIndex);
-    }
-
-    // Event listeners for arrows
-    nextArrow.addEventListener('click', () => {
-        nextSlide();
-        resetSlideInterval();
-    });
-
-    prevArrow.addEventListener('click', () => {
-        prevSlide();
-        resetSlideInterval();
-    });
-
-    // Event listeners for dots
-    dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-            const index = parseInt(dot.dataset.index);
-            showSlide(index);
-            currentIndex = index;
-            resetSlideInterval();
-        });
-    });
-
-    // Auto-slide functionality
-    function startSlideShow() {
-        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    }
-
-    function resetSlideInterval() {
-        clearInterval(slideInterval);
-        startSlideShow();
-    }
-
-    // Initialize carousel
-    showSlide(currentIndex);
-    startSlideShow();
-
-    // --- About Section "Read More" Functionality ---
-    const readMoreButton = document.querySelector('.about-section .read-more-button');
-    const aboutTextContent = document.getElementById('about-more-info');
-
-    if (readMoreButton && aboutTextContent) {
-        readMoreButton.addEventListener('click', () => {
-            aboutTextContent.classList.toggle('expanded');
-            if (aboutTextContent.classList.contains('expanded')) {
-                readMoreButton.textContent = 'Read Less';
-            } else {
-                readMoreButton.textContent = 'Read More';
+                mainNavbar.classList.remove('navbar-scrolled');
             }
         });
+    }
+
+    // Example of a simple alert on form submission (if you add a contact form later)
+    // const contactForm = document.getElementById('contactForm');
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
+    //         alert('Pesan Anda telah terkirim!');
+    //         this.reset();
+    //     });
+    // }
+
+    // Dynamic year for footer copyright
+    const currentYearElement = document.querySelector('.footer .mb-0');
+    if (currentYearElement) {
+        currentYearElement.innerHTML = `&copy; ${new Date().getFullYear()} DPP. P-AP3I. All Rights Reserved.`;
     }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    
+    // Fungsi untuk mengupdate slide
+    function updateSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        
+        currentIndex = index;
+    }
+    
+    // Navigasi dengan dots
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            updateSlide(parseInt(dot.getAttribute('data-index')));
+        });
+    });
+    
+    // Tombol prev/next
+    prevBtn.addEventListener('click', () => {
+        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateSlide(newIndex);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        const newIndex = (currentIndex + 1) % slides.length;
+        updateSlide(newIndex);
+    });
+    
+    // Auto slide (opsional)
+    let slideInterval = setInterval(() => {
+        const newIndex = (currentIndex + 1) % slides.length;
+        updateSlide(newIndex);
+    }, 5000);
+    
+    // Hentikan auto slide saat hover
+    const carousel = document.querySelector('.carousel-container');
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+            const newIndex = (currentIndex + 1) % slides.length;
+            updateSlide(newIndex);
+        }, 5000);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Elements
+    const gallerySlides = document.querySelectorAll('.gallery-slide');
+    const serviceItems = document.querySelectorAll('.service-item');
+    const dots = document.querySelectorAll('.gallery-dot');
+    const prevBtn = document.querySelector('.gallery-arrow.prev');
+    const nextBtn = document.querySelector('.gallery-arrow.next');
+    let currentIndex = 0;
+    let autoSlideInterval;
+    
+    // Initialize
+    function init() {
+        updateSlide(currentIndex);
+        startAutoSlide();
+    }
+    
+    // Update slide
+    function updateSlide(index) {
+        // Update gallery
+        gallerySlides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
+        // Update content
+        serviceItems.forEach((item, i) => {
+            item.classList.toggle('active', i === index);
+        });
+        
+        // Update dots
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+        
+        currentIndex = index;
+    }
+    
+    // Auto slide
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            const nextIndex = (currentIndex + 1) % gallerySlides.length;
+            updateSlide(nextIndex);
+        }, 5000);
+    }
+    
+    function pauseAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+    
+    // Event listeners
+    prevBtn.addEventListener('click', () => {
+        const prevIndex = (currentIndex - 1 + gallerySlides.length) % gallerySlides.length;
+        updateSlide(prevIndex);
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        const nextIndex = (currentIndex + 1) % gallerySlides.length;
+        updateSlide(nextIndex);
+    });
+    
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            const index = parseInt(dot.getAttribute('data-index'));
+            updateSlide(index);
+        });
+    });
+    
+    // Hover pause
+    const gallery = document.querySelector('.services-gallery');
+    gallery.addEventListener('mouseenter', pauseAutoSlide);
+    gallery.addEventListener('mouseleave', startAutoSlide);
+    
+    // Initialize
+    init();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const mitraCards = document.querySelectorAll('#mitra-section .card');
+
+    const observerOptions = {
+        root: null, // Menggunakan viewport sebagai root
+        rootMargin: '0px',
+        threshold: 0.2 // Trigger saat 20% dari elemen terlihat
+    };
+
+    const cardObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target); // Berhenti mengamati setelah animasi pertama
+            }
+        });
+    }, observerOptions);
+
+    mitraCards.forEach(card => {
+        card.style.opacity = 0; // Sembunyikan elemen awalnya
+        card.style.transform = 'translateY(20px)'; // Geser sedikit ke bawah awalnya
+        card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'; // Tambah transisi
+        cardObserver.observe(card); // Mulai mengamati kartu
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
