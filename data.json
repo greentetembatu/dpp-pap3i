@@ -198,6 +198,7 @@
       ]
       }
     ],
+
     "carouselTitle": "Berikut ini adalah mitra kami",
     "carouselSlides": [
       {
@@ -222,7 +223,9 @@
       }
     ]
   },
-    "dppActivitySection": {
+    
+  
+  "dppActivitySection": {
         "title": "KEGIATAN DPP",
         "image": "assets/foto/foto-kegiatan.png",
         "imageCaption": {
@@ -232,36 +235,49 @@
         "content": {
             "heading": "Laporan Rapat Harian DPP",
             "paragraphs": [
-                "Pada tanggal 31 Desember 2024, Dewan Pimpinan Pusat (DPP) mengadakan rapat rutin untuk mengevaluasi kinerja tahunan dan merencanakan program kerja untuk tahun yang akan datang. Rapat ini dihadiri oleh seluruh pengurus inti dan membahas berbagai isu strategis.",
-                "Dalam rapat tersebut, disepakati beberapa program unggulan yang akan menjadi fokus utama, termasuk peningkatan kualitas pelayanan anggota, pelatihan kewirausahaan, serta advokasi kebijakan publik yang mendukung industri. Seluruh peserta rapat berkomitmen untuk bekerja lebih keras demi kemajuan organisasi."
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
             ]
         }
     
   },
+
   "dpdActivitySection": {
-    "title": "KEGIATAN DPD",
-    "image": "assets/foto/Foto Ketua perkumpulan.png",
-    "imageCaption": {
-      "title": "kegiatan",
-      "date": "tanggal"
-    },
-    "content": {
-      "heading": "kegiatan",
-      "text": "kegiatan teks"
-    }
+        "title": "KEGIATAN DPD",
+        "image": "assets/foto/foto-kegiatan.png",
+        "imageCaption": {
+            "title": "Rapat Pengurus Harian",
+            "date": "31 Desember 2024"
+        },
+        "content": {
+            "heading": "Laporan Rapat Harian DPD",
+            "paragraphs": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."            ]
+        }
+    
   },
-  "dpcActivitySection": {
-    "title": "KEGIATAN DPC",
-    "image": "assets/foto/Foto Ketua perkumpulan.png",
-    "imageCaption": {
-      "title": "kegiatan",
-      "date": "tanggal"
-    },
-    "content": {
-      "heading": "kegiatan",
-      "text": "kegiatan teks"
-    }
+
+    "dpcActivitySection": {
+        "title": "KEGIATAN DPC",
+        "image": "assets/foto/foto-kegiatan.png",
+        "imageCaption": {
+            "title": "Rapat Pengurus Harian",
+            "date": "31 Desember 2024"
+        },
+        "content": {
+            "heading": "Laporan Rapat Harian DPC",
+            "paragraphs": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita?",
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
+            ]
+        }
+    
   },
+
   "blogSection": {
     "title": "BLOG P-AP3I",
     "articles": [
@@ -273,7 +289,7 @@
         "image": "assets/foto/Slide-1.png",
         "imageAlt": "Foto artikel blog pertama",
         "caption": "Deskripsi singkat tentang foto blog pertama.",
-        "content": "Isi blog pertama. Anggota P-AP3I terdiri dari para praktisi pijat penyehatan, para pemilik lembaga kursus pijat penyehatan, para pengusaha di bidang pijat penyehatan, maupun orang-orang yang memiliki kepedulian dan minat terhadap pijat penyehatan di Indonesia. <br> Kemudian mereka dilibatkan dalam menyusun buku pedoman pelatihan <i>selfcare</i> akupresur untuk kader (masyarakat). Atas saran dari Kemenkes pula lah maka dibentuklah AP3I pada tahun 2003."
+        "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
       },
       
       {
@@ -284,8 +300,7 @@
         "image": "assets/foto/Slide-2.png",
         "imageAlt": "Foto artikel blog kedua",
         "caption": "Deskripsi singkat tentang foto blog kedua.",
-        "content": "Isi blog kedua. Konten ini bisa berisi berbagai informasi tentang kegiatan, tips pijat, atau berita terbaru dari P-AP3I."
-      }
+        "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."      }
     ]
   },
   "beritaSection": {
@@ -299,7 +314,7 @@
         "image": "assets/foto/Slide-1.png",
         "imageAlt": "Foto artikel bertia pertama",
         "caption": "Deskripsi singkat tentang foto berita pertama.",
-        "content": "Isi berita pertama. Anggota P-AP3I terdiri dari para praktisi pijat penyehatan, para pemilik lembaga kursus pijat penyehatan, para pengusaha di bidang pijat penyehatan, maupun orang-orang yang memiliki kepedulian dan minat terhadap pijat penyehatan di Indonesia. <br> Kemudian mereka dilibatkan dalam menyusun buku pedoman pelatihan <i>selfcare</i> akupresur untuk kader (masyarakat). Atas saran dari Kemenkes pula lah maka dibentuklah AP3I pada tahun 2003."
+        "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
       },
       {
         "title": "Judul Berita kedua",
@@ -309,7 +324,7 @@
         "image": "assets/foto/Slide-1.png",
         "imageAlt": "Foto artikel bertia kedua",
         "caption": "Deskripsi singkat tentang foto berita kedua.",
-        "content": "Isi berita kedua. Anggota P-AP3I terdiri dari para praktisi pijat penyehatan, para pemilik lembaga kursus pijat penyehatan, para pengusaha di bidang pijat penyehatan, maupun orang-orang yang memiliki kepedulian dan minat terhadap pijat penyehatan di Indonesia. <br> Kemudian mereka dilibatkan dalam menyusun buku pedoman pelatihan <i>selfcare</i> akupresur untuk kader (masyarakat). Atas saran dari Kemenkes pula lah maka dibentuklah AP3I pada tahun 2003."
+        "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
       }
     ]
   }
