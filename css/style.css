@@ -40,14 +40,14 @@ h1, h2, h3, h4, h5, h6 {
     --bs-biru: #3044f8; /* Warna teks hijau */
     --bs-silver: #b0abab; /* Warna teks hijau */
     --bs-kuning: #ded601; /* Warna teks hijau */
-    --h1: clamp(2.5rem, 5vw + 1rem, 4rem);
-    --h2: clamp(2rem, 4vw + 0.5rem, 3rem);
-    --h3: clamp(1.75rem, 3.5vw + 0.25rem, 2.5rem);
-    --h4: clamp(1.5rem, 3vw + 0.25rem, 2rem);
-    --h5: clamp(1.25rem, 2.5vw + 0.25rem, 1.5rem);
-    --h6: clamp(1rem, 2vw + 0.25rem, 1.25rem);
-    --p: clamp(0.75rem, 1vw + 0.25rem, 1rem);
-
+    --h1: clamp(2.75rem, 5.5vw + 1rem, 4.5rem);
+    --h2: clamp(2.25rem, 4.5vw + 0.5rem, 3.5rem);
+    --h3: clamp(2rem, 4vw + 0.25rem, 3rem);
+    --h4: clamp(1.75rem, 3.5vw + 0.25rem, 2.5rem);
+    --h5: clamp(1.5rem, 3vw + 0.25rem, 1.75rem);
+    --h6: clamp(1.25rem, 2.5vw + 0.25rem, 1.5rem);
+    --p: clamp(0.875rem, 1.25vw + 0.25rem, 1.125rem);
+    --p2: clamp(0.75rem, 1vw + 0.25rem, 1rem);
 
 }
 
@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Top Contact Bar */
 .top-contact-bar {
-    font-size: var(--p);
+    font-size: var(--p2);
 }
 
 .top-contact-bar .social-links a,
@@ -119,7 +119,30 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.75rem 1.5rem;
 }
 
+.fixed-side-icons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
 
+.fixed-side-icons .icon {
+    opacity: 0.5; /* Efek samar-samar */
+    transition: opacity 0.3s ease;
+}
+
+.fixed-side-icons .icon:hover {
+    opacity: 1; /* Lebih jelas saat dihover */
+}
+
+.fixed-side-icons img {
+    width: 40px; /* Sesuaikan ukuran logo */
+    height: auto;
+}
 
 
 
@@ -182,7 +205,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .welcome-message p {
-    font-size: var(--h6);
+    font-size: var(--p);
     margin-bottom: 25px;
 }
 
@@ -243,7 +266,7 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     padding: 10px 20px;
     border-radius: 20px;
-    font-size: var(--h6);
+    font-size: var(--p);
 }
 
 /* Navigation Arrows */
@@ -254,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    font-size: var(--h6);
+    font-size: var(--p);
     padding: 10px 15px;
     cursor: pointer;
     z-index: 10;
@@ -323,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-title {
-    font-size: var(--h2); /* Ukuran font judul */
+    font-size: var(--h3); /* Ukuran font judul */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -382,13 +405,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .image-caption h3 {
     margin: 0;
-    font-size: var(--h5);
+    font-size: var(--h6);
 }
 
 .image-caption p {
     margin: 0;
     color: #000000; /* Warna teks */
     font-weight: bolder;
+    font-size: var(--p2);
 }
 
 /* Gaya konten teks */
@@ -403,7 +427,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content h4 {
-    font-size: var(--h5);
+    font-size: var(--h6);
     color: #343a40; /* Warna teks gelap */
     margin-bottom: 20px;
 }
@@ -413,6 +437,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
     color: #333;
     text-align: justify;
+    font-size: var(--p);
+
 }
 
 
@@ -434,7 +460,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, sans-serif;
 }
 .visi-misi-head-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -447,11 +473,11 @@ h1, h2, h3, h4, h5, h6 {
   gap: 40px;
 }
 /* Gaya untuk judul utama di section Visi Misi */
-.main-title {
-  font-size: 2.5rem;
+/*.main-title {
+  font-size: var(--h1);
   font-weight: bold;
   margin-bottom: 50px; /* Jarak antara judul dan card Visi/Misi */
-  color: #333;
+  /*color: #333;
 
 }
 
@@ -499,7 +525,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gaya untuk deskripsi dan daftar */
 .visi-description {
-  font-size: var(--h6);
+  font-size: var(--p);
   line-height: 1.6;
   color: #555;
   font-weight: bold;
@@ -513,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .misi-list li {
   position: relative;
-  font-size: var(--h6);
+  font-size: var(--p);
   line-height: 1.6;
   color: #555;
   margin-bottom: 15px;
@@ -592,6 +618,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .history-card-body p {
+  font-size: var(--p);
   line-height: 1.6;
   margin-bottom: 1rem;
   color: #333;
@@ -605,6 +632,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 /* Gaya untuk gambar */
@@ -618,10 +647,11 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gaya untuk caption gambar */
 .image-caption-text {
-  font-size: 0.7rem;
+  font-size: var(--p2);
   text-align: center;
   color: #6c757d;
   margin-top: 15px;
+  align-items: center;
 
 }
 
@@ -654,7 +684,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Judul section */
 .tim-kami-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 30px;
   color: #04812d;
@@ -694,14 +724,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tim-kami-caption h3 {
-  font-size: var(--h6);
+  font-size: var(--p);
   font-weight: bold;
   margin: 0;
   color: #333;
 }
 
 .tim-kami-caption p {
-  font-size: var(--p);
+  font-size: var(--p2);
   color: #6c757d;
   margin: 5px 0 0;
 }
@@ -734,7 +764,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Judul section */
 .ruang-lingkup-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 40px;
   color: #059a2f;
@@ -797,7 +827,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Judul section */
 .legal-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 40px;
   color: #059a2f;
@@ -855,7 +885,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Judul utama */
 .rekomendasi-kta-main-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 50px;
   color: #077a0f;
@@ -894,7 +924,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Gaya untuk judul kartu */
 .rekomendasi-title,
 .kta-title {
-  font-size: var(--h4);
+  font-size: var(--h5);
   font-weight: bold;
   color: #343a40;
   margin-bottom: 20px;
@@ -944,7 +974,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pelatihan-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 20px;
   color: #1f880a;
@@ -1035,7 +1065,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bantuan-hukum-title {
-    font-size: var(--h2);
+    font-size: var(--h3);
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -1094,7 +1124,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .bantuan-hukum-image-caption h3 {
     margin: 0;
-    font-size: var(--p);
+    font-size: var(h6);
 }
 
 .bantuan-hukum-image-caption p {
@@ -1110,7 +1140,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bantuan-hukum-content h4 {
-    font-size: var(--h4);
+    font-size: var(--h5);
     color: #343a40;
     margin-bottom: 20px;
     text-align: center;
@@ -1149,7 +1179,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Judul utama */
 .mitra-kami-main-title {
-  font-size: var(--h2);
+  font-size: var(--h3);
   font-weight: bold;
   margin-bottom: 30px;
   color: #078e09;
@@ -1184,7 +1214,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mitra-card-title {
-  font-size: var(--h4);
+  font-size: var(--h5);
   font-weight: bold;
   margin-bottom: 15px;
   color: #069726;
@@ -1206,7 +1236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mitra-carousel-title {
-  font-size: 1.5rem;
+  font-size: var(--p2);
   font-weight: bold;
   margin-bottom: 30px;
   color: #333;
@@ -1232,7 +1262,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mitra-carousel-caption {
-  font-size: 1rem;
+  font-size: var(--p2);
   margin-top: 15px;
   color: #555;
 }
@@ -1246,7 +1276,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   border: none;
   padding: 10px 15px;
-  font-size: 1.5rem;
+  font-size: var(--p2);
   cursor: pointer;
   z-index: 10;
   transition: background-color 0.3s ease;
@@ -1277,7 +1307,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kegiatan-dpp-title {
-    font-size: var(--h2); /* Ukuran font judul */
+    font-size: var(--h3); /* Ukuran font judul */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
@@ -1344,6 +1374,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: #000000; /* Warna teks */
     font-weight: bolder;
+    font-size: var(--p);
 }
 
 /* Gaya konten teks */
@@ -1374,21 +1405,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Gaya dasar untuk section */
 /* Gaya dasar untuk section 'Kegiatan DPP' */
 .kegiatan-dpd {
-    padding: 20px 20px; /* Padding atas dan bawah untuk memberi ruang */
-    text-align: center; /* Teks rata tengah */
+    padding: 40px 20px; /* Padding atas dan bawah untuk memberi ruang */
     font-family: Arial, sans-serif; /* Font yang digunakan */
 }
 
 /* Gaya header section */
 .kegiatan-dpd-header {
-    margin: 40px auto;
+    margin-bottom: 40px;
 }
 
 .kegiatan-dpd-title {
-    font-size: var(--h2); /* Ukuran font judul */
+    font-size: var(--h3); /* Ukuran font judul */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    color: #037d4c;
 }
 
 .kegiatan-dpd-section-divider {
@@ -1404,17 +1435,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column; /* Tata letak kolom untuk mobile */
     align-items: center;
     gap: 40px; /* Jarak antara gambar dan konten */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Media query untuk tampilan desktop */
 @media (min-width: 992px) {
     .kegiatan-dpd-container {
         flex-direction: row; /* Tata letak baris untuk desktop */
-        text-align: left; /* Teks rata kiri di desktop */
-        max-width: 1140px;
-        margin: 0 auto;
         justify-content: space-between; /* Menambahkan jarak antara item */
         align-items: flex-start; /* Meratakan item ke bagian atas */
+        text-align: left;
     }
 }
 
@@ -1451,17 +1482,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: #000000; /* Warna teks */
     font-weight: bolder;
+    font-size: var(--p);
 }
 
 /* Gaya konten teks */
 .kegiatan-dpd-content {
-    width: 100%;
-}
-
-@media (min-width: 992px) {
-    .kegiatan-dpd-content {
-        max-width: 65%; /* Memberikan ruang untuk gambar di desktop */
-    }
+    flex-grow: 1;
+    line-height: 1.6;
 }
 
 .kegiatan-dpd-content h4 {
@@ -1471,8 +1498,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kegiatan-dpd-content p {
-    line-height: 2.2;
-    margin-bottom: 1rem;
+    margin-bottom: var(--p);
     color: #333;
     text-align: justify;
 }
@@ -1492,21 +1518,21 @@ h1, h2, h3, h4, h5, h6 {
 /* Gaya dasar untuk section */
 /* Gaya dasar untuk section 'Kegiatan DPP' */
 .kegiatan-dpc {
-    padding: 20px 20px; /* Padding atas dan bawah untuk memberi ruang */
-    text-align: center; /* Teks rata tengah */
+    padding: 40px 20px; /* Padding atas dan bawah untuk memberi ruang */
     font-family: Arial, sans-serif; /* Font yang digunakan */
 }
 
 /* Gaya header section */
 .kegiatan-dpc-header {
-    margin: 40px auto;
+    margin-bottom: 40px;
 }
 
 .kegiatan-dpc-title {
-    font-size: var(--h2); /* Ukuran font judul */
+    font-size: var(--h3); /* Ukuran font judul */
     font-weight: bold;
     margin-bottom: 10px;
     text-align: center;
+    color: #037d4c;
 }
 
 .kegiatan-dpc-section-divider {
@@ -1522,17 +1548,17 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column; /* Tata letak kolom untuk mobile */
     align-items: center;
     gap: 40px; /* Jarak antara gambar dan konten */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* Media query untuk tampilan desktop */
 @media (min-width: 992px) {
     .kegiatan-dpc-container {
         flex-direction: row; /* Tata letak baris untuk desktop */
-        text-align: left; /* Teks rata kiri di desktop */
-        max-width: 1140px;
-        margin: 0 auto;
         justify-content: space-between; /* Menambahkan jarak antara item */
         align-items: flex-start; /* Meratakan item ke bagian atas */
+        text-align: left;
     }
 }
 
@@ -1569,17 +1595,13 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     color: #000000; /* Warna teks */
     font-weight: bolder;
+    font-size: var(--p);
 }
 
 /* Gaya konten teks */
 .kegiatan-dpc-content {
-    width: 100%;
-}
-
-@media (min-width: 992px) {
-    .kegiatan-dpc-content {
-        max-width: 65%; /* Memberikan ruang untuk gambar di desktop */
-    }
+    flex-grow: 1;
+    line-height: 1.6;
 }
 
 .kegiatan-dpc-content h4 {
@@ -1589,8 +1611,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .kegiatan-dpc-content p {
-    line-height: 2.2;
-    margin-bottom: 1rem;
+    margin-bottom: var(--p);
     color: #333;
     text-align: justify;
 }
@@ -1606,7 +1627,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Gaya dasar untuk seksi blog */
 .blog-section, .berita-section {
     padding: 20px 20px;
-    background-color: #f9f9f9;
+    background-color: white;
     font-family: Arial, sans-serif;
 }
 
@@ -1617,7 +1638,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-title, .berita-title {
     text-align: center;
-    font-size: var(--h2);
+    font-size: var(--h3);
     font-weight: bold;
     color: #333;
     margin-bottom: 40px;
@@ -1669,21 +1690,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-card-head h4, .berita-card-head h4 {
-    font-size: var(--h4);
+    font-size: var(--h5);
     color: #333;
     margin: 0 0 5px;
     font-weight: bold;
 }
 
 .blog-card-head h5, .berita-card-head h5 {
-    font-size: var(--h5);
+    font-size: var(--h6);
     color: #666;
     margin: 0 0 5px;
     font-weight: bold;
 }
 
 .blog-card-head p, .berita-card-head p {
-    font-size: var(--p);
+    font-size: var(--p2);
     font-weight:bold ;
     color: #999;
     margin: 0;
@@ -1711,18 +1732,69 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .blog-image-caption-text, .berita-image-caption-text {
-    font-size: 0.5rem;
+    font-size: var(--p2);
     color: #777;
     margin-top: 5px;
+    text-decoration: none;
 }
 
 .blog-card-body p, .berita-card-body p {
     font-size: var(--p);
     color: #555;
     line-height: 1.6;
-    font-weight: bold;
     
 }
+
+
+
+
+
+        .souvenir-section {
+            font-family: Arial;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        .souvenir-section h2 {
+            font-size: var(--h3);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .souvenir-section p {
+            font-size: var(--p);
+            color: #555;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .souvenir-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .souvenir-item {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .souvenir-item:hover {
+            transform: scale(1.1);
+        }
+        .souvenir-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+
+
+
 
 
 
@@ -1736,7 +1808,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-title {
-    font-size: var(--h2);
+    font-size: var(--h3);
     font-weight: bold;
     margin-bottom: 10px;
     color: #1a1a1a;
@@ -1747,7 +1819,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-description {
-    font-size: var(--h6);
+    font-size: var(--p);
     line-height: 1.6;
     color: #555;
     margin-bottom: 40px; /* Jarak antara deskripsi dan kontainer 2 kolom */
@@ -1904,7 +1976,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-title {
-    font-size: var(--h4);
+    font-size: var(--h6);
     font-weight: bold;
     margin-bottom: 20px;
     color: #fff;
@@ -1921,7 +1993,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-info p {
-    font-size: var(--h6);
+    font-size: var(--p);
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -1961,7 +2033,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-wrap: wrap; /* Memastikan tautan bisa pindah ke baris baru */
     gap: 15px; /* Memberikan jarak antar tautan */
-    font-size: var(--h6);
+    font-size: var(--p);
 }
 .footer-contact {
     list-style: none;
@@ -1978,7 +2050,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer-contact li {
     color: #ccc;
     text-decoration: none;
-    font-size: var(--h6);
+    font-size: var(--p);
     margin-bottom: 10px;
     display: block;
     transition: color 0.3s ease;
@@ -2020,6 +2092,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-copyright p {
-    font-size: var(--h6);
+    font-size: var(--p);
     color: #aaa;
 }
