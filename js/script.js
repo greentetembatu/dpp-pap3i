@@ -548,45 +548,90 @@ const populateDppActivitySection = (kegiatanDPP) => {
 //   .then(data => populateDppActivitySection(data.dppActivitySection))
 //   .catch(error => console.error('Error fetching data:', error));
     
-    const populateDpdActivitySection = (kegiatanDPD) => {
-        if (!kegiatanDPD) return;
-        const kegiatanDPDTitle = document.querySelector('.kegiatan-dpd-title');
-        if (kegiatanDPDTitle) kegiatanDPDTitle.textContent = kegiatanDPD.title;
-        const kegiatanDPDImage = document.querySelector('.kegiatan-dpd-image-wrapper img');
-        if (kegiatanDPDImage) {
-            kegiatanDPDImage.src = kegiatanDPD.image;
-            kegiatanDPDImage.alt = `Foto ${kegiatanDPD.imageCaption.title}`;
-        }
-        const kegiatanDPDImageCaptionH3 = document.querySelector('.kegiatan-dpd-image-caption h3');
-        if (kegiatanDPDImageCaptionH3) kegiatanDPDImageCaptionH3.textContent = kegiatanDPD.imageCaption.title;
-        const kegiatanDPDImageCaptionP = document.querySelector('.kegiatan-dpd-image-caption p');
-        if (kegiatanDPDImageCaptionP) kegiatanDPDImageCaptionP.textContent = kegiatanDPD.imageCaption.date;
-        const kegiatanDPDContentH4 = document.querySelector('.kegiatan-dpd-content h4');
-        if (kegiatanDPDContentH4) kegiatanDPDContentH4.textContent = kegiatanDPD.content.heading;
-        const kegiatanDPDContentP = document.querySelector('.kegiatan-dpd-content p');
-        if (kegiatanDPDContentP) kegiatanDPDContentP.textContent = kegiatanDPD.content.text;
-    };
-    
-    const populateDpcActivitySection = (kegiatanDPC) => {
-        if (!kegiatanDPC) return;
-        const kegiatanDPCTitle = document.querySelector('.kegiatan-dpc-title');
-        if (kegiatanDPCTitle) kegiatanDPCTitle.textContent = kegiatanDPC.title;
-        const kegiatanDPCImage = document.querySelector('.kegiatan-dpc-image-wrapper img');
-        if (kegiatanDPCImage) {
-            kegiatanDPCImage.src = kegiatanDPC.image;
-            kegiatanDPCImage.alt = `Foto ${kegiatanDPC.imageCaption.title}`;
-        }
-        const kegiatanDPCImageCaptionH3 = document.querySelector('.kegiatan-dpc-image-caption h3');
-        if (kegiatanDPCImageCaptionH3) kegiatanDPCImageCaptionH3.textContent = kegiatanDPC.imageCaption.title;
-        const kegiatanDPCImageCaptionP = document.querySelector('.kegiatan-dpc-image-caption p');
-        if (kegiatanDPCImageCaptionP) kegiatanDPCImageCaptionP.textContent = kegiatanDPC.imageCaption.date;
-        const kegiatanDPCContentH4 = document.querySelector('.kegiatan-dpc-content h4');
-        if (kegiatanDPCContentH4) kegiatanDPCContentH4.textContent = kegiatanDPC.content.heading;
-        const kegiatanDPCContentP = document.querySelector('.kegiatan-dpc-content p');
-        if (kegiatanDPCContentP) kegiatanDPCContentP.textContent = kegiatanDPC.content.text;
-    };
+   const populateDpdActivitySection = (kegiatanDPD) => {
+    if (!kegiatanDPD) return;
 
-    // Fungsi untuk Blog Section
+    const kegiatanDPDTitle = document.querySelector('.kegiatan-dpd-title');
+    if (kegiatanDPDTitle) kegiatanDPDTitle.textContent = kegiatanDPD.title;
+
+    const kegiatanDPDImage = document.querySelector('.kegiatan-dpd-image-wrapper img');
+    if (kegiatanDPDImage) {
+        kegiatanDPDImage.src = kegiatanDPD.image;
+        kegiatanDPDImage.alt = `Foto ${kegiatanDPD.imageCaption.title}`;
+    }
+
+    const kegiatanDPDImageCaptionH3 = document.querySelector('.kegiatan-dpd-image-caption h3');
+    if (kegiatanDPDImageCaptionH3) kegiatanDPDImageCaptionH3.textContent = kegiatanDPD.imageCaption.title;
+
+    const kegiatanDPDImageCaptionP = document.querySelector('.kegiatan-dpd-image-caption p');
+    if (kegiatanDPDImageCaptionP) kegiatanDPDImageCaptionP.textContent = kegiatanDPD.imageCaption.date;
+
+    const kegiatanDPDContentH4 = document.querySelector('.kegiatan-dpd-content h4');
+    if (kegiatanDPDContentH4) kegiatanDPDContentH4.textContent = kegiatanDPD.content.heading;
+
+    // Bagian penting: mengelola paragraf dari array
+    const contentContainer = document.querySelector('.kegiatan-dpd-content');
+    if (contentContainer && kegiatanDPD.content.paragraphs) {
+        // Hapus semua paragraf yang sudah ada
+        const existingParagraphs = contentContainer.querySelectorAll('p');
+        existingParagraphs.forEach(p => p.remove());
+
+        // Buat dan tambahkan paragraf baru untuk setiap item di array
+        kegiatanDPD.content.paragraphs.forEach(pText => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = pText;
+            contentContainer.appendChild(newParagraph);
+        });
+    }
+};
+    
+  
+
+
+
+const populateDpcActivitySection = (kegiatanDPC) => {
+    if (!kegiatanDPC) return;
+
+    const kegiatanDPCTitle = document.querySelector('.kegiatan-dpc-title');
+    if (kegiatanDPCTitle) kegiatanDPCTitle.textContent = kegiatanDPC.title;
+
+    const kegiatanDPCImage = document.querySelector('.kegiatan-dpc-image-wrapper img');
+    if (kegiatanDPCImage) {
+        kegiatanDPCImage.src = kegiatanDPC.image;
+        kegiatanDPCImage.alt = `Foto ${kegiatanDPC.imageCaption.title}`;
+    }
+
+    const kegiatanDPCImageCaptionH3 = document.querySelector('.kegiatan-dpc-image-caption h3');
+    if (kegiatanDPCImageCaptionH3) kegiatanDPCImageCaptionH3.textContent = kegiatanDPC.imageCaption.title;
+
+    const kegiatanDPCImageCaptionP = document.querySelector('.kegiatan-dpc-image-caption p');
+    if (kegiatanDPCImageCaptionP) kegiatanDPCImageCaptionP.textContent = kegiatanDPC.imageCaption.date;
+
+    const kegiatanDPCContentH4 = document.querySelector('.kegiatan-dpc-content h4');
+    if (kegiatanDPCContentH4) kegiatanDPCContentH4.textContent = kegiatanDPC.content.heading;
+
+    // Bagian penting: mengelola paragraf dari array
+    const contentContainer = document.querySelector('.kegiatan-dpc-content');
+    if (contentContainer && kegiatanDPC.content.paragraphs) {
+        // Hapus semua paragraf yang sudah ada
+        const existingParagraphs = contentContainer.querySelectorAll('p');
+        existingParagraphs.forEach(p => p.remove());
+
+        // Buat dan tambahkan paragraf baru untuk setiap item di array
+        kegiatanDPC.content.paragraphs.forEach(pText => {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = pText;
+            contentContainer.appendChild(newParagraph);
+        });
+    }
+};
+ 
+
+
+
+
+
+// Fungsi untuk Blog Section
     const populateBlogSection = (blog) => {
         if (!blog) return; // Pastikan data blog ada
         const blogTitleElement = document.querySelector('.blog-section .blog-title');
@@ -654,3 +699,21 @@ const populateDppActivitySection = (kegiatanDPP) => {
 
     fetchData();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
