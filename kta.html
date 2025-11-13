@@ -75,7 +75,7 @@ function checkKTA() {
 
     // ⚠️ KRUSIAL: Gunakan URL ABSOLUT ke check_status.php
     // GANTI 'proyek_php' dengan nama folder proyek PHP Anda di htdocs
-    const apiUrl = 'http://localhost/surat-rekomendasi-dan-kta/check_status.php?kta_number=' + encodeURIComponent(ktaNumber); 
+    const apiUrl = 'http://rekom-kta-26.ct.ws/check_status.php?kta_number=' + encodeURIComponent(ktaNumber); 
 
     fetch(apiUrl)
         .then(response => {
@@ -112,4 +112,5 @@ function checkKTA() {
 }
 </script>
 </body>
+
 </html>
