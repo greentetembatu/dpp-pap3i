@@ -424,7 +424,7 @@ const SITE_DATA = {
    * ============================================================ */
   popupSection: {
     active: true,
-    intervalMs: 5000,                 // 3 menit = 180.000 ms
+    intervalMs: 180000,                 // 3 menit = 180.000 ms
     image: "assets/logo.jpeg",
     imageAlt: "Promo P-AP3I",
     title: "Info Terbaru P-AP3I",       // opsional (bisa dikosongkan "")
