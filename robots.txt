@@ -1,0 +1,52 @@
+# ============================================================
+# robots.txt untuk https://dpp-pap3i-jakarta.vercel.app/
+# Dokumentasi: https://developers.google.com/search/docs/crawling-indexing/robots/intro
+# ============================================================
+
+# Izinkan semua crawler mengakses situs publik
+User-agent: *
+Allow: /
+
+# Blokir halaman yang tidak perlu diindeks (form/login)
+Disallow: /admin.html
+Disallow: /admin/
+Disallow: /kta.html
+Disallow: /*?*
+
+# Blokir folder yang tidak relevan untuk crawler
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/foto/
+
+# ============================================================
+# Crawler spesifik: izinkan akses penuh untuk Googlebot
+# ============================================================
+User-agent: Googlebot
+Allow: /
+
+# ============================================================
+# Crawler AI: blokir agar konten tidak dipakai untuk training
+# (Opsional — hapus blok ini jika ingin diizinkan)
+# ============================================================
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+# ============================================================
+# Sitemap
+# ============================================================
+Sitemap: https://dpp-pap3i-jakarta.vercel.app/sitemap.xml

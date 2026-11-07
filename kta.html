@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengecekan KTA</title>
+    <style>
+        .kta-check-container {
+            border: 1px solid #e0e0e0; padding: 25px; border-radius: 10px; 
+            background-color: #ffffff; max-width: 500px; margin: 20px auto; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .kta-input {
+            width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 6px; 
+            box-sizing: border-box; font-size: 16px;
+        }
+        .btn {
+            width: 100%; padding: 12px; border: none; border-radius: 6px; 
+            font-size: 16px; font-weight: 600; cursor: pointer; 
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #007bff; color: white;
+        }
+        .btn-success {
+            background-color: #28a745; color: white; margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kta-check-container">
+    <p style="text-align: center; color: #555; font-size: 16px; margin-bottom: 20px;">
+        Masukkan nomor Kartu Tanda Anggota Anda untuk melihat informasi detail.
+    </p>
+    <div style="margin-bottom: 15px;">
+        <label for="kta-number" style="display: block; font-weight: 600; color: #333; margin-bottom: 8px;">Nomor KTA</label>
+        <input type="text" id="kta-number" name="kta-number" placeholder="Contoh: 1234567890" class="kta-input">
+    </div>
+    
+    <button onclick="checkKTA()" id="check-status-btn" class="btn btn-primary">
+        Cek Status
+    </button>
+    
+    <p id="result-message" style="text-align: center; margin-top: 20px; color: #007bff; font-weight: 600; display: none;">
+        Hasil pengecekan akan muncul di sini.
+    </p>
+    
+    <button id="view-button" class="btn btn-success" style="display: none;">
+        Lihat Dokumen KTA (PDF)
+    </button>
+</div>
+
+<script>
+function checkKTA() {
+    const ktaInput = document.getElementById('kta-number');
+    const resultMessage = document.getElementById('result-message');
+    const viewButton = document.getElementById('view-button');
+    const checkButton = document.getElementById('check-status-btn');
+    const ktaNumber = ktaInput.value.trim();
+
+    // 1. Reset dan Indikator Loading
+    resultMessage.style.display = 'block';
+    resultMessage.textContent = '⏳ Mengecek status...';
+    resultMessage.style.color = '#007bff';
+    viewButton.style.display = 'none';
+    checkButton.disabled = true; 
+
+    if (!ktaNumber) {
+        resultMessage.textContent = '❌ Masukkan Nomor KTA Anda.';
+        resultMessage.style.color = '#dc3545';
+        checkButton.disabled = false;
+        return;
+    }
+
+    // ⚠️ KRUSIAL: Gunakan URL ABSOLUT ke check_status.php
+    // GANTI 'proyek_php' dengan nama folder proyek PHP Anda di htdocs
+    const apiUrl = 'http://localhost/surat-rekomendasi-dan-kta/check_status.php?kta_number=' + encodeURIComponent(ktaNumber); 
+
+    fetch(apiUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Kesalahan Server: ' + response.status);
+            }
+            return response.json();
+        })
+        .then(data => {
+            resultMessage.textContent = data.message;
+            
+            if (data.success && data.status === 'Aktif') {
+                resultMessage.style.color = '#28a745'; // Hijau
+                viewButton.style.display = 'block';
+                
+                viewButton.onclick = function() {
+                    window.open(data.pdf_url, '_blank'); 
+                };
+
+            } else {
+                resultMessage.style.color = '#dc3545'; // Merah
+                viewButton.style.display = 'none';
+            }
+        })
+        .catch(error => {
+            // Error ini mungkin terjadi jika server XAMPP tidak berjalan atau folder tidak ditemukan
+            resultMessage.textContent = `⚠️ Error Koneksi: Pastikan server XAMPP dan path '${apiUrl}' sudah benar. (${error.message})`;
+            resultMessage.style.color = '#dc3545';
+            console.error('Fetch Error:', error);
+        })
+        .finally(() => {
+            checkButton.disabled = false;
+        });
+}
+</script>
+</body>
+</html>
