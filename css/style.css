@@ -1236,7 +1236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mitra-carousel-title {
-  font-size: var(--p2);
+  font-size: var(--h5);
   font-weight: bold;
   margin-bottom: 30px;
   color: #333;
@@ -2224,4 +2224,38 @@ body.popup-open {
   }
   .popup-title { font-size: 1rem; }
   .popup-description { font-size: 0.85rem; }
+}
+
+
+
+
+
+
+
+
+
+
+/* Banner Action Styles */
+.banner-action {
+  display: none;
+  text-align: center;
+  padding: 15px;
+  background: #f8f9fa; /* Warna latar tombol */
+  border-top: 1px solid #eee;
+}
+
+.banner-btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #0d6efd;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.banner-btn:hover {
+  background: #0b5ed7;
+  color: #fff;
 }

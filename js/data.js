@@ -25,7 +25,7 @@ const SITE_DATA = {
    * ============================================================ */
   aboutSection: {
     title: "TENTANG P-AP3I",
-    image: "assets/foto/Foto Ketua perkumpulan.png",
+    image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Ketua_PAP3I.png",
     imageCaption: {
       name: "Febborn S",
       position: "Ketua Umum P-AP3I"
@@ -77,7 +77,7 @@ const SITE_DATA = {
         "Anggota P-AP3I terdiri dari para praktisi pijat penyehatan, para pemilik lembaga kursus pijat penyehatan, para pengusaha di bidang pijat penyehatan, maupun orang-orang yang memiliki kepedulian dan minat terhadap pijat penyehatan di Indonesia."
       ]
     },
-    image: "assets/foto/Slide-1.png",
+    image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
     imageCaption: "Salah satu momen penting dalam sejarah P-AP3I."
   },
 
@@ -88,45 +88,45 @@ const SITE_DATA = {
     title: "TIM KAMI",
     members: [
       {
-        image: "assets/foto/Foto Ketua perkumpulan.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Ketua_PAP3I.png",
         alt: "Ketua Umum",
         name: "Febborn S",
         position: "Ketua Umum"
       },
       {
-        image: "assets/foto/foto-a1.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Sekretaris",
         name: "Adias",
         position: "Sekretaris"
       },
       {
-        image: "assets/foto/foto-a1.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Bendahara",
-        name: "Hendra",
+        name: "Bendahara",
         position: "Bendahara"
       },
       {
-        image: "assets/foto/foto-sufyan.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Divisi Organisasi",
-        name: "Ust. Sufyan",
+        name: "Bid. Organisasi",
         position: "Bid. Organisasi"
       },
       {
-        image: "assets/foto/foto-budi.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Divisi Humas",
-        name: "Budi",
+        name: "Humas",
         position: "Bid. Humas"
       },
       {
-        image: "assets/foto/foto-a1.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Divisi Hukum",
         name: "ADV. Faizal",
         position: "Bid. Hukum"
       },
       {
-        image: "assets/foto/foto-a1.jpg",
+        image: "https://images.icon-icons.com/3708/PNG/512/man_person_people_avatar_icon_230017.png",
         alt: "Divisi Litbang",
-        name: "Samsuddin",
+        name: "Bid. Pelatihan",
         position: "Bid. Pelatihan"
       }
     ]
@@ -192,22 +192,22 @@ const SITE_DATA = {
     title: "PELATIHAN P-AP3I",
     carouselSlides: [
       {
-        image: "assets/foto/Slide-1.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
         alt: "Pelatihan Akupresur",
         caption: "Pelatihan Akupresur Dasar untuk Masyarakat"
       },
       {
-        image: "assets/foto/pelatihan-2.jpg",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I2.png",
         alt: "Pelatihan Pijat Refleksi",
         caption: "Sesi Praktik Pijat Refleksi Kaki"
       },
       {
-        image: "assets/foto/pelatihan-3.jpg",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I3.png",
         alt: "Sertifikasi Instruktur",
         caption: "Penyerahan Sertifikat untuk Instruktur"
       },
       {
-        image: "assets/foto/pelatihan-4.jpg",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
         alt: "Workshop Sehat Mandiri",
         caption: "Workshop Sehat Mandiri Akupresur bersama Kader Kesehatan"
       }
@@ -257,10 +257,10 @@ const SITE_DATA = {
     ],
     carouselTitle: "Berikut ini adalah mitra kami",
     carouselSlides: [
-      { image: "assets/foto/Slide-1.png", alt: "Mitra 1", caption: "Nama Mitra 1" },
-      { image: "assets/foto/pelatihan-2.jpg", alt: "Mitra 2", caption: "Nama Mitra 2" },
-      { image: "assets/foto/pelatihan-3.jpg", alt: "Mitra 3", caption: "Nama Mitra 3" },
-      { image: "assets/foto/pelatihan-4.jpg", alt: "Mitra 4", caption: "Nama Mitra 4" }
+      { image: "assets/logo.jpeg", alt: "Mitra 1", caption: "Nama Mitra 1" },
+      { image: "assets/logo.jpeg", alt: "Mitra 2", caption: "Nama Mitra 2" },
+      { image: "assets/logo.jpeg", alt: "Mitra 3", caption: "Nama Mitra 3" },
+      { image: "assets/logo.jpeg", alt: "Mitra 4", caption: "Nama Mitra 4" }
     ]
   },
 
@@ -269,7 +269,7 @@ const SITE_DATA = {
    * ============================================================ */
   dppActivitySection: {
     title: "KEGIATAN DPP",
-    image: "assets/foto/foto-kegiatan.png",
+    image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
     imageCaption: {
       title: "Rapat Pengurus Harian",
       date: "31 Desember 2024"
@@ -289,7 +289,7 @@ const SITE_DATA = {
    * ============================================================ */
   dpdActivitySection: {
     title: "KEGIATAN DPD",
-    image: "assets/foto/foto-kegiatan.png",
+    image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I2.png",
     imageCaption: {
       title: "Rapat Pengurus Harian",
       date: "31 Desember 2024"
@@ -309,7 +309,7 @@ const SITE_DATA = {
    * ============================================================ */
   dpcActivitySection: {
     title: "KEGIATAN DPC",
-    image: "assets/foto/foto-kegiatan.png",
+    image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I3.png",
     imageCaption: {
       title: "Rapat Pengurus Harian",
       date: "31 Desember 2024"
@@ -335,7 +335,7 @@ const SITE_DATA = {
         subtitle: "Sub Judul Blog Pertama",
         author: "Penulis 1",
         date: "Tanggal 7 Agustus 2025",
-        image: "assets/foto/Slide-1.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
         imageAlt: "Foto artikel blog pertama",
         caption: "Deskripsi singkat tentang foto blog pertama.",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
@@ -345,7 +345,7 @@ const SITE_DATA = {
         subtitle: "Sub Judul Blog Kedua",
         author: "Penulis 2",
         date: "Tanggal 10 Agustus 2025",
-        image: "assets/foto/Slide-2.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I2.png",
         imageAlt: "Foto artikel blog kedua",
         caption: "Deskripsi singkat tentang foto blog kedua.",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
@@ -364,7 +364,7 @@ const SITE_DATA = {
         subtitle: "Sub Judul Berita Pertama",
         author: "Penulis 1",
         date: "Tanggal 7 Agustus 2025",
-        image: "assets/foto/Slide-1.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I3.png",
         imageAlt: "Foto artikel berita pertama",
         caption: "Deskripsi singkat tentang foto berita pertama.",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
@@ -374,7 +374,7 @@ const SITE_DATA = {
         subtitle: "Sub Judul Berita Kedua",
         author: "Penulis 1",
         date: "Tanggal 7 Agustus 2025",
-        image: "assets/foto/Slide-1.png",
+        image: "https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png",
         imageAlt: "Foto artikel berita kedua",
         caption: "Deskripsi singkat tentang foto berita kedua.",
         content: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, expedita? <br> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, dolor quibusdam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore voluptates temporibus itaque."
@@ -430,8 +430,44 @@ const SITE_DATA = {
     title: "Info Terbaru P-AP3I",       // opsional (bisa dikosongkan "")
     description: "Klik untuk melihat informasi selengkapnya.",  // opsional
     buttonText: "Selengkapnya",
-    buttonHref: "https://bit.ly/FormPAP3I24",
+    buttonHref: "https://dpp-pap3i-jakarta.vercel.app/",
     openInNewTab: true                  // buka di tab baru
+  }, 
+    /* ============================================================
+   * BANNER IKLAN (4 Slot Terpisah)
+   * 
+   * CARA EDIT:
+   * - Ubah path gambar di "image"
+   * - Ubah alt text di "alt"
+   * - Jika ingin mengosongkan salah satu slot, ubah "image" jadi ""
+   * ============================================================ */
+  /* ============================================================
+   * BANNER IKLAN (4 Slot Terpisah)
+   * ============================================================ */
+  bannersSection: {
+    banner1: {
+      image: "https://asbin-ecosystem.vercel.app/og-image.jpg",
+      alt: "Banner Iklan 1",
+      link: "https://asbin-ecosystem.vercel.app/",       // Ganti dengan URL tujuan
+      buttonText: "Selengkapnya"                 // Teks tombol (opsional)
+    },
+    banner2: {
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjcKvpQ8DmNmubBkMsaWrO7_H_f71tOR3prpgeU0SShR4PyXfonpD9E0oU&s=10",
+      alt: "Banner Iklan 2",
+      link: "https://pildun26-631ac.web.app/",        // Ganti dengan URL tujuan
+      buttonText: "Selengkapnya"
+    },
+    banner3: {
+      image: "https://kontrakan-a5314.web.app/adi-mardani-dev.png",
+      alt: "Banner Iklan 3",
+      link: "https://kontrakan-a5314.web.app/",                                  // URL kosong = tombol tidak muncul
+      buttonText: "Kunjungi"
+    },
+    banner4: {
+      image: "https://kasirasbinecosystem.vercel.app/icons/icon-512x512.png",
+      alt: "Banner Iklan 4",
+      link: "https://kasirasbinecosystem.vercel.app/",
+      buttonText: "Kunjungi"
+    }
   }
-
 };

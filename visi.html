@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- ============ PRIMARY SEO ============ -->
-    <title>P-AP3I | Perkumpulan Para Pemijat Penyehatan Indonesia</title>
+    <title>Visi | P-AP3I | Perkumpulan Para Pemijat Penyehatan Indonesia</title>
     <meta
       name="description"
       content="Website resmi DPP P-AP3I (Perkumpulan Para Pemijat Penyehatan Indonesia). Wadah profesional pemijat tradisional Indonesia: informasi organisasi, visi misi, anggota, pelatihan, dan kontak."
@@ -78,6 +78,8 @@
     <!-- ============ THEME & ICONS ============ -->
     <meta name="theme-color" content="#0d6efd" />
     <meta name="msapplication-TileColor" content="#0d6efd" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="P-AP3I" />
@@ -157,19 +159,25 @@
             >
             <!--GANTI NOMOR HP-->
             <a
-              href="mailto:greentetambatu@gmail.com"
+              href="mailto:dpppap3i@mail.com"
               class="text-white me-3"
               aria-label="Email"
-              ><i class="fas fa-envelope me-1"></i> dpppap3i@gmail.com</a
+              ><i class="fas fa-envelope me-1"></i> dpppap3i@mail.com</a
             >
             <!--GANTI EMAIL-->
-            <a href="admin.html" class="text-white" aria-label="admin"
+            <a
+              href="https://ktarekompap3i.infinityfreeapp.com/index.php"
+              class="text-white"
+              aria-label="admin"
               ><i class="fas fa-user me-1"></i> admin</a
             >
           </div>
         </div>
       </div>
     </div>
+    <!--=============================================-->
+    <!--=============================================-->
+    <!--=============================================-->
 
     <nav
       class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top"
@@ -352,6 +360,54 @@
         </div>
       </div>
     </nav>
+    <!--=============================================-->
+    <!--=============================================-->
+    <!--=============================================-->
+    <div class="fixed-side-icons">
+      <a href="https://wa.me/6285214056596" target="_blank" class="icon wa">
+        <img src="assets/logo-wa-whatsapp.png" alt="WhatsApp" />
+      </a>
+      <a href="mailto:greentetembatu@gmail.com" class="icon email">
+        <img src="assets/logo-email.png" alt="Email" />
+      </a>
+    </div>
+
+    <a
+      href="https://ktarekompap3i.infinityfreeapp.com/kta.html"
+      style="
+        opacity: 0.5;
+        position: fixed;
+        right: 20px;
+        top: 20%;
+        background: #00ff4c;
+        color: #8d0505;
+        padding: 15px 8px;
+        border-radius: 10px 0 0 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        box-shadow: -3px 0 15px rgba(0, 255, 76, 0.4);
+        z-index: 1000;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        writing-mode: horizontal-tb;
+      "
+    >
+      <span style="font-size: 20px">🔍</span>
+      <span>Cek</span>
+      <span>KTA</span>
+    </a>
+
+
+
+
+
+
+
+
 
     <section id="visi-misi" class="visimisi-section">
       <h2 class="visi-misi-head-title"><span class="highlight-text"></span></h2>
@@ -374,8 +430,10 @@
     </section>
 
     <!-- banner iklan -->
-    <!-- Section Gambar Responsif -->
-    <section class="responsive-section">
+    <!-- ========================================== -->
+    <!-- BANNER IKLAN 4 -->
+    <!-- ========================================== -->
+    <section class="responsive-section" id="banner-section-4">
       <div class="container">
         <div
           class="flex-container"
@@ -386,13 +444,45 @@
             flex-wrap: wrap;
           "
         >
-          <!-- Wrapper Gambar -->
           <div
             class="image-wrapper"
             style="max-width: 800px; width: 100%; height: auto"
           >
-            <div class="image-card">
-              <img src="assets/foto/banner-iklan.gif" alt="Foto kegiatan DPP" />
+            <div class="image-card" style="position: relative">
+              <img
+                class="banner-img"
+                src=""
+                alt=""
+                style="width: 100%; display: block"
+              />
+
+              <!-- Tombol Selengkapnya -->
+              <div
+                class="banner-action"
+                style="
+                  display: none;
+                  text-align: center;
+                  padding: 15px;
+                  background: #fff;
+                "
+              >
+                <a
+                  class="banner-btn"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="
+                    display: inline-block;
+                    padding: 10px 24px;
+                    background: #0d6efd;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 6px;
+                    font-weight: 600;
+                  "
+                  >Selengkapnya</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -512,31 +602,20 @@
       </div>
     </section>
 
-    <!-- banner iklan -->
-    <!-- Section Gambar Responsif -->
-    <section class="responsive-section">
-      <div class="container">
-        <div
-          class="flex-container"
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-          "
-        >
-          <!-- Wrapper Gambar -->
-          <div
-            class="image-wrapper"
-            style="max-width: 800px; width: 100%; height: auto"
-          >
-            <div class="image-card">
-              <img src="assets/foto/banner-iklan.gif" alt="Foto kegiatan DPP" />
-            </div>
-          </div>
-        </div>
+    <!--=============================================-->
+    <!--=============================================-->
+    <!--=============================================-->
+
+    <section id="souvenir-section">
+      <div class="souvenir-section">
+        <h2 class="souvenir-title"></h2>
+        <p class="souvenir-description"></p>
+        <div class="souvenir-gallery"></div>
       </div>
     </section>
+    <!--=============================================-->
+    <!--=============================================-->
+    <!--=============================================-->
 
     <section id="kontak" class="contact-section">
       <h2 class="contact-title">
@@ -600,44 +679,8 @@
       </div>
     </section>
 
-    <div class="fixed-side-icons">
-      <a href="https://wa.me/6285214056596" target="_blank" class="icon wa">
-        <img src="assets/logo-wa-whatsapp.png" alt="WhatsApp" />
-      </a>
-      <a href="mailto:greentetembatu@gmail.com" class="icon email">
-        <img src="assets/logo-email.png" alt="Email" />
-      </a>
-    </div>
 
-    <a
-      href="https://rekom-kta-26.ct.ws/kta.html"
-      style="
-        opacity: 0.5;
-        position: fixed;
-        right: 20px;
-        top: 20%;
-        background: #00ff4c;
-        color: #8d0505;
-        padding: 15px 8px;
-        border-radius: 10px 0 0 10px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 14px;
-        box-shadow: -3px 0 15px rgba(0, 255, 76, 0.4);
-        z-index: 1000;
-        transition: all 0.3s ease;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px;
-        writing-mode: horizontal-tb;
-      "
-    >
-      <span style="font-size: 20px">🔍</span>
-      <span>Cek</span>
-      <span>KTA</span>
-    </a>
-
+    
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-row">

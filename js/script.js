@@ -588,7 +588,42 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   };
+  /* ============================================================
+   * BANNER IKLAN (4 Slot Terpisah dengan Tombol)
+   * ============================================================ */
+  const populateBannersSection = (banners) => {
+    if (!banners) return;
 
+    for (let i = 1; i <= 4; i++) {
+      const bannerData = banners[`banner${i}`];
+      const section = document.getElementById(`banner-section-${i}`);
+      if (!section) continue;
+
+      const imgEl = section.querySelector('.banner-img');
+      const actionEl = section.querySelector('.banner-action');
+      const btnEl = section.querySelector('.banner-btn');
+
+      // 1. Atur Gambar
+      if (!bannerData || !bannerData.image) {
+        section.style.display = 'none';
+        continue;
+      }
+      
+      imgEl.src = bannerData.image;
+      imgEl.alt = bannerData.alt || `Banner Iklan ${i}`;
+      imgEl.loading = 'lazy';
+
+      // 2. Atur Tombol (Jika ada link)
+      if (bannerData.link && actionEl && btnEl) {
+        actionEl.style.display = 'block'; // Tampilkan wadah tombol
+        btnEl.href = bannerData.link;
+        btnEl.textContent = bannerData.buttonText || 'Selengkapnya';
+      } else if (actionEl) {
+        actionEl.style.display = 'none';  // Sembunyikan jika link kosong
+      }
+    }
+  };
+  
   /* ---------- PANGGIL SEMUA ---------- */
   populateHeroSection(data.heroSection);
   populateAboutSection(data.aboutSection);
@@ -607,6 +642,7 @@ document.addEventListener("DOMContentLoaded", () => {
   populateArticles(data.blogSection, "blog-card", "blog");
   populateArticles(data.beritaSection, "berita-card", "berita");
   populateSouvenirSection(data.souvenirSection);
+  populateBannersSection(data.bannersSection);
 });
 
 
@@ -626,87 +662,91 @@ document.addEventListener("DOMContentLoaded", () => {
    * Muncul setiap `intervalMs` (default 3 menit).
    * Konten diambil dari SITE_DATA.popupSection.
    * ============================================================ */
-  document.addEventListener("DOMContentLoaded", function () {
-    if (typeof SITE_DATA === "undefined" || !SITE_DATA.popupSection) return;
+document.addEventListener("DOMContentLoaded", function () {
+  if (typeof SITE_DATA === "undefined" || !SITE_DATA.popupSection) return;
 
-    const cfg = SITE_DATA.popupSection;
-    if (!cfg.active) return; // nonaktif → tidak tampil
-    if (!cfg.image) return; // tidak ada gambar → tidak tampil
+  const cfg = SITE_DATA.popupSection;
+  if (!cfg.active) return;
+  if (!cfg.image) return;
 
-    const popup = document.getElementById("popup-promo");
-    if (!popup) return; // HTML container tidak ada
+  const popup = document.getElementById("popup-promo");
+  if (!popup) return;
 
-    const closeBtn = popup.querySelector(".popup-close");
-    const imgEl = popup.querySelector(".popup-image");
-    const titleEl = popup.querySelector(".popup-title");
-    const descEl = popup.querySelector(".popup-description");
-    const ctaEl = popup.querySelector(".popup-cta");
-    const card = popup.querySelector(".popup-card");
+  const closeBtn = popup.querySelector(".popup-close");
+  const imgEl = popup.querySelector(".popup-image");
+  const titleEl = popup.querySelector(".popup-title");
+  const descEl = popup.querySelector(".popup-description");
+  const ctaEl = popup.querySelector(".popup-cta");
 
-    // --- Isi konten dari data ---
-    imgEl.src = cfg.image;
-    imgEl.alt = cfg.imageAlt || "Promo";
-    titleEl.textContent = cfg.title || "";
-    descEl.textContent = cfg.description || "";
+  // --- Isi konten dari data ---
+  imgEl.src = cfg.image;
+  imgEl.alt = cfg.imageAlt || "Promo";
+  titleEl.textContent = cfg.title || "";
+  descEl.textContent = cfg.description || "";
 
-    // Sembunyikan title/desc jika kosong
-    if (!cfg.title) titleEl.style.display = "none";
-    if (!cfg.description) descEl.style.display = "none";
+  if (!cfg.title) titleEl.style.display = "none";
+  if (!cfg.description) descEl.style.display = "none";
 
-    // Tombol CTA
-    ctaEl.textContent = cfg.buttonText || "Selengkapnya";
-    ctaEl.href = cfg.buttonHref || "#";
-    if (cfg.openInNewTab) {
-      ctaEl.target = "_blank";
-      ctaEl.rel = "noopener noreferrer";
-    } else {
-      ctaEl.removeAttribute("target");
-      ctaEl.removeAttribute("rel");
-    }
+  // Tombol CTA
+  ctaEl.textContent = cfg.buttonText || "Selengkapnya";
+  ctaEl.href = cfg.buttonHref || "#";
+  if (cfg.openInNewTab) {
+    ctaEl.target = "_blank";
+    ctaEl.rel = "noopener noreferrer";
+  } else {
+    ctaEl.removeAttribute("target");
+    ctaEl.removeAttribute("rel");
+  }
 
-    // --- Fungsi buka / tutup ---
-    let isOpen = false;
+  // --- Fungsi buka / tutup ---
+  let isOpen = false;
 
-    const openPopup = () => {
-      if (isOpen) return;
-      isOpen = true;
-      popup.classList.add("is-visible");
-      popup.setAttribute("aria-hidden", "false");
-      document.body.classList.add("popup-open");
-    };
+  const openPopup = () => {
+    if (isOpen) return;
+    isOpen = true;
+    popup.classList.add("is-visible");
+    popup.setAttribute("aria-hidden", "false");
+    document.body.classList.add("popup-open");
+  };
 
-    const closePopup = () => {
-      if (!isOpen) return;
-      isOpen = false;
-      popup.classList.remove("is-visible");
-      popup.setAttribute("aria-hidden", "true");
-      document.body.classList.remove("popup-open");
-    };
+  const closePopup = () => {
+    if (!isOpen) return;
+    isOpen = false;
+    popup.classList.remove("is-visible");
+    popup.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("popup-open");
+  };
 
-    // --- Event: tombol close ---
-    if (closeBtn) closeBtn.addEventListener("click", closePopup);
+  // --- Event: tombol close ---
+  if (closeBtn) closeBtn.addEventListener("click", closePopup);
 
-    // --- Event: klik di luar card (overlay) ---
-    popup.addEventListener("click", (e) => {
-      if (e.target === popup) closePopup();
-    });
-
-    // --- Event: tombol Escape ---
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape" && isOpen) closePopup();
-    });
-
-    // --- Event: tombol CTA ditutup setelah diklik (opsional) ---
-    ctaEl.addEventListener("click", () => {
-      // Beri jeda sedikit agar navigasi tab baru tidak terblokir
-      setTimeout(closePopup, 100);
-    });
-
-    // --- Timer: muncul setiap intervalMs ---
-    const interval = Number(cfg.intervalMs) || 180000; // fallback 3 menit
-    setInterval(() => {
-      // Jika popup sedang terbuka, jangan tampilkan ulang
-      if (isOpen) return;
-      openPopup();
-    }, interval);
+  // --- Event: klik di luar card (overlay) ---
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) closePopup();
   });
+
+  // --- Event: tombol Escape ---
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && isOpen) closePopup();
+  });
+
+  // --- Event: tombol CTA ditutup setelah diklik (opsional) ---
+  ctaEl.addEventListener("click", () => {
+    setTimeout(closePopup, 100);
+  });
+
+  // ============================================================
+  // LOGIKA WAKTU POPUP
+  // ============================================================
+  const interval = Number(cfg.intervalMs) || 180000; // default 3 menit
+
+  // 1. Munculkan saat pertama kali web dibuka (beri jeda 2 detik agar elegan)
+  setTimeout(openPopup, 2000);
+
+  // 2. Munculkan berulang setiap 3 menit
+  setInterval(() => {
+    // Jika popup sedang terbuka, jangan tampilkan ulang
+    if (isOpen) return;
+    openPopup();
+  }, interval);
+});

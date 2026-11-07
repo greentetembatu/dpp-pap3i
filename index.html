@@ -80,7 +80,6 @@
     <meta name="msapplication-TileColor" content="#0d6efd" />
     <meta name="mobile-web-app-capable" content="yes" />
 
-
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="P-AP3I" />
@@ -160,13 +159,13 @@
             >
             <!--GANTI NOMOR HP-->
             <a
-              href="mailto:greentetambatu@gmail.com"
+              href="mailto:dpppap3i@mail.com"
               class="text-white me-3"
               aria-label="Email"
-              ><i class="fas fa-envelope me-1"></i> dpppap3i@gmail.com</a
+              ><i class="fas fa-envelope me-1"></i> dpppap3i@mail.com</a
             >
             <!--GANTI EMAIL-->
-            <a href="admin.html" class="text-white" aria-label="admin"
+            <a href="https://ktarekompap3i.infinityfreeapp.com/index.php" class="text-white" aria-label="admin"
               ><i class="fas fa-user me-1"></i> admin</a
             >
           </div>
@@ -371,7 +370,7 @@
     </div>
 
     <a
-      href="https://rekom-kta-26.ct.ws/kta.html"
+      href="https://ktarekompap3i.infinityfreeapp.com/kta.html"
       style="
         opacity: 0.5;
         position: fixed;
@@ -399,6 +398,25 @@
       <span>KTA</span>
     </a>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <!--=============================================-->
     <!--=============================================-->
     <!--=============================================-->
@@ -409,24 +427,24 @@
           <h1>Oficial Website P-AP3I</h1>
           <h2>Perkumpulan Para Pemijat Penyehatan Indonesia</h2>
           <p>Membangun Kesehatan dan Melestarikan Budaya</p>
-          <a href="#tentang-kami" class="cta-button">Kenali Kami</a>
+          <a href="about.html" class="cta-button">Kenali Kami</a>
         </div>
 
         <div class="carousel-slides">
           <div class="carousel-slide active">
-            <img src="assets/foto/Slide-1.png" alt="Slide tentang Layanan" />
+            <img src="https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I1.png" alt="foto-assets-p-ap3i1" />
             <div class="slide-caption">Layanan</div>
           </div>
 
           <div class="carousel-slide">
-            <img src="assets/foto/Slide-2.png" alt="Slide tentang Mitra" />
+            <img src="https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I2.png" alt="foto-assets-p-ap3i2" />
             <div class="slide-caption">Mitra</div>
           </div>
 
           <div class="carousel-slide">
             <img
-              src="assets/foto/Slide-3.png"
-              alt="Slide tentang Pembangunan"
+              src="https://ik.imagekit.io/ud82stdm3/p-ap3i/Foto_Asset_PAP3I3.png"
+              alt="foto-assets-p-ap3i3"
             />
             <div class="slide-caption">Kegiatan</div>
           </div>
@@ -747,9 +765,10 @@
     <!--=============================================-->
     <!--=============================================-->
 
-    <!-- Section Gambar Responsif -->
-    <!-- Section Gambar Responsif -->
-    <section class="responsive-section">
+    <!-- ========================================== -->
+    <!-- BANNER IKLAN 1 -->
+    <!-- ========================================== -->
+    <section class="responsive-section" id="banner-section-1">
       <div class="container">
         <div
           class="flex-container"
@@ -760,18 +779,84 @@
             flex-wrap: wrap;
           "
         >
-          <!-- Wrapper Gambar -->
           <div
             class="image-wrapper"
             style="max-width: 800px; width: 100%; height: auto"
           >
-            <div class="image-card">
-              <img src="assets/foto/banner-iklan.gif" alt="Foto kegiatan DPP" />
+            <div class="image-card" style="position: relative">
+              <img
+                class="banner-img"
+                src=""
+                alt=""
+                style="width: 100%; display: block"
+              />
+
+              <!-- Tombol Selengkapnya -->
+              <div
+                class="banner-action"
+                style="
+                  display: none;
+                  text-align: center;
+                  padding: 15px;
+                  background: #fff;
+                "
+              >
+                <a
+                  class="banner-btn"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="
+                    display: inline-block;
+                    padding: 10px 24px;
+                    background: #0d6efd;
+                    color: #fff;
+                    text-decoration: none;
+                    border-radius: 6px;
+                    font-weight: 600;
+                  "
+                  >Selengkapnya</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- ========================================== -->
+    <!-- Jika ingin membuat banner iklan lain, copy saja section banner 1 nanti ganti id nya menjadi 2 atau 3 atau 4 yang lainnya tetap sama -->
+    <!-- ========================================== -->
+    <!--=============================================-->
+    <!--=============================================-->
+    <!--=============================================-->
+    <!-- Container popup promo (diisi oleh script.js) -->
+    <div
+      id="popup-promo"
+      class="popup-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+      aria-hidden="true"
+    >
+      <div class="popup-card">
+        <button type="button" class="popup-close" aria-label="Tutup popup">
+          &times;
+        </button>
+        <img class="popup-image" src="" alt="" loading="lazy" />
+        <div class="popup-body">
+          <h3 class="popup-title" id="popup-title"></h3>
+          <p class="popup-description"></p>
+          <a
+            class="popup-cta"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+          ></a>
+        </div>
+      </div>
+    </div>
+
     <!--=============================================-->
     <!--=============================================-->
     <!--=============================================-->
@@ -799,8 +884,8 @@
           <div class="contact-details">
             <h4>Informasi Kontak</h4>
             <p><strong>Alamat:</strong> Jl. Cempaka Putih - Jakarta Pusat</p>
-            <p><strong>Email:</strong> info@pap3i.or.id</p>
-            <p><strong>Telepon:</strong> +62 21 520 1590</p>
+            <p><strong>Email:</strong> dpppap3i@mail.com</p>
+            <p><strong>Telepon:</strong> +6285214056596</p>
           </div>
         </div>
 
@@ -837,35 +922,6 @@
         </div>
       </div>
     </section>
-    <!--=============================================-->
-    <!--=============================================-->
-    <!--=============================================-->
-    <!-- Container popup promo (diisi oleh script.js) -->
-    <div
-      id="popup-promo"
-      class="popup-overlay"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="popup-title"
-      aria-hidden="true"
-    >
-      <div class="popup-card">
-        <button type="button" class="popup-close" aria-label="Tutup popup">
-          &times;
-        </button>
-        <img class="popup-image" src="" alt="" loading="lazy" />
-        <div class="popup-body">
-          <h3 class="popup-title" id="popup-title"></h3>
-          <p class="popup-description"></p>
-          <a
-            class="popup-cta"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-          ></a>
-        </div>
-      </div>
-    </div>
     <!--=============================================-->
     <!--=============================================-->
     <!--=============================================-->
